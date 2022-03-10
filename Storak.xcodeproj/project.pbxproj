@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A11087027DA52950012715F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11086F27DA52950012715F /* AppDelegate.swift */; };
+		0A11087227DA52950012715F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11087127DA52950012715F /* SceneDelegate.swift */; };
+		0A11087727DA52950012715F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A11087527DA52950012715F /* Main.storyboard */; };
+		0A11087A27DA52950012715F /* Storak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A11087827DA52950012715F /* Storak.xcdatamodeld */; };
+		0A11087C27DA52970012715F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A11087B27DA52970012715F /* Assets.xcassets */; };
+		0A11087F27DA52970012715F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A11087D27DA52970012715F /* LaunchScreen.storyboard */; };
+		0A11088A27DA52980012715F /* StorakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11088927DA52980012715F /* StorakTests.swift */; };
+		0A11089427DA52980012715F /* StorakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11089327DA52980012715F /* StorakUITests.swift */; };
+		0A11089627DA52980012715F /* StorakUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11089527DA52980012715F /* StorakUITestsLaunchTests.swift */; };
+		0A1108E827DA70D80012715F /* UserAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108E727DA70D80012715F /* UserAccount.storyboard */; };
+		0A1108EA27DA70FC0012715F /* ItemDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108E927DA70FC0012715F /* ItemDetails.storyboard */; };
+		0A1108EC27DA71AD0012715F /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108EB27DA71AD0012715F /* Categories.storyboard */; };
+		0A1108EE27DA72E60012715F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108ED27DA72E60012715F /* Payment.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A11088627DA52980012715F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A11086427DA52950012715F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A11086B27DA52950012715F;
+			remoteInfo = Storak;
+		};
+		0A11089027DA52980012715F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A11086427DA52950012715F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A11086B27DA52950012715F;
+			remoteInfo = Storak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A11086C27DA52950012715F /* Storak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A11086F27DA52950012715F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A11087127DA52950012715F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0A11087627DA52950012715F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A11087927DA52950012715F /* Storak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storak.xcdatamodel; sourceTree = "<group>"; };
+		0A11087B27DA52970012715F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A11087E27DA52970012715F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A11088027DA52970012715F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A11088527DA52980012715F /* StorakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A11088927DA52980012715F /* StorakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorakTests.swift; sourceTree = "<group>"; };
+		0A11088F27DA52980012715F /* StorakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A11089327DA52980012715F /* StorakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorakUITests.swift; sourceTree = "<group>"; };
+		0A11089527DA52980012715F /* StorakUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorakUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A1108E727DA70D80012715F /* UserAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAccount.storyboard; sourceTree = "<group>"; };
+		0A1108E927DA70FC0012715F /* ItemDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetails.storyboard; sourceTree = "<group>"; };
+		0A1108EB27DA71AD0012715F /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		0A1108ED27DA72E60012715F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A11086927DA52950012715F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A11088227DA52980012715F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A11088C27DA52980012715F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A11086327DA52950012715F = {
+			isa = PBXGroup;
+			children = (
+				0A11086E27DA52950012715F /* Storak */,
+				0A11088827DA52980012715F /* StorakTests */,
+				0A11089227DA52980012715F /* StorakUITests */,
+				0A11086D27DA52950012715F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A11086D27DA52950012715F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A11086C27DA52950012715F /* Storak.app */,
+				0A11088527DA52980012715F /* StorakTests.xctest */,
+				0A11088F27DA52980012715F /* StorakUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A11086E27DA52950012715F /* Storak */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108A427DA52BB0012715F /* ViewModels */,
+				0A1108A327DA52B40012715F /* Models */,
+				0A1108A227DA52AB0012715F /* Views */,
+				0A11086F27DA52950012715F /* AppDelegate.swift */,
+				0A11087127DA52950012715F /* SceneDelegate.swift */,
+				0A11087B27DA52970012715F /* Assets.xcassets */,
+				0A11088027DA52970012715F /* Info.plist */,
+				0A11087827DA52950012715F /* Storak.xcdatamodeld */,
+			);
+			path = Storak;
+			sourceTree = "<group>";
+		};
+		0A11088827DA52980012715F /* StorakTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A11088927DA52980012715F /* StorakTests.swift */,
+			);
+			path = StorakTests;
+			sourceTree = "<group>";
+		};
+		0A11089227DA52980012715F /* StorakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A11089327DA52980012715F /* StorakUITests.swift */,
+				0A11089527DA52980012715F /* StorakUITestsLaunchTests.swift */,
+			);
+			path = StorakUITests;
+			sourceTree = "<group>";
+		};
+		0A1108A227DA52AB0012715F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108E627DA70A20012715F /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A1108A327DA52B40012715F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A1108A427DA52BB0012715F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0A1108E627DA70A20012715F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108F227DA730A0012715F /* Soultan */,
+				0A1108F127DA73020012715F /* Maged */,
+				0A1108EF27DA72EC0012715F /* Shibl */,
+				0A1108F027DA72FB0012715F /* Nagy */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0A1108EF27DA72EC0012715F /* Shibl */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108E727DA70D80012715F /* UserAccount.storyboard */,
+			);
+			path = Shibl;
+			sourceTree = "<group>";
+		};
+		0A1108F027DA72FB0012715F /* Nagy */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108E927DA70FC0012715F /* ItemDetails.storyboard */,
+				0A1108ED27DA72E60012715F /* Payment.storyboard */,
+			);
+			path = Nagy;
+			sourceTree = "<group>";
+		};
+		0A1108F127DA73020012715F /* Maged */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108EB27DA71AD0012715F /* Categories.storyboard */,
+			);
+			path = Maged;
+			sourceTree = "<group>";
+		};
+		0A1108F227DA730A0012715F /* Soultan */ = {
+			isa = PBXGroup;
+			children = (
+				0A11087D27DA52970012715F /* LaunchScreen.storyboard */,
+				0A11087527DA52950012715F /* Main.storyboard */,
+			);
+			path = Soultan;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A11086B27DA52950012715F /* Storak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A11089927DA52980012715F /* Build configuration list for PBXNativeTarget "Storak" */;
+			buildPhases = (
+				0A11086827DA52950012715F /* Sources */,
+				0A11086927DA52950012715F /* Frameworks */,
+				0A11086A27DA52950012715F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Storak;
+			productName = Storak;
+			productReference = 0A11086C27DA52950012715F /* Storak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A11088427DA52980012715F /* StorakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A11089C27DA52980012715F /* Build configuration list for PBXNativeTarget "StorakTests" */;
+			buildPhases = (
+				0A11088127DA52980012715F /* Sources */,
+				0A11088227DA52980012715F /* Frameworks */,
+				0A11088327DA52980012715F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A11088727DA52980012715F /* PBXTargetDependency */,
+			);
+			name = StorakTests;
+			productName = StorakTests;
+			productReference = 0A11088527DA52980012715F /* StorakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A11088E27DA52980012715F /* StorakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A11089F27DA52980012715F /* Build configuration list for PBXNativeTarget "StorakUITests" */;
+			buildPhases = (
+				0A11088B27DA52980012715F /* Sources */,
+				0A11088C27DA52980012715F /* Frameworks */,
+				0A11088D27DA52980012715F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A11089127DA52980012715F /* PBXTargetDependency */,
+			);
+			name = StorakUITests;
+			productName = StorakUITests;
+			productReference = 0A11088F27DA52980012715F /* StorakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A11086427DA52950012715F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					0A11086B27DA52950012715F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					0A11088427DA52980012715F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 0A11086B27DA52950012715F;
+					};
+					0A11088E27DA52980012715F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 0A11086B27DA52950012715F;
+					};
+				};
+			};
+			buildConfigurationList = 0A11086727DA52950012715F /* Build configuration list for PBXProject "Storak" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A11086327DA52950012715F;
+			productRefGroup = 0A11086D27DA52950012715F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A11086B27DA52950012715F /* Storak */,
+				0A11088427DA52980012715F /* StorakTests */,
+				0A11088E27DA52980012715F /* StorakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A11086A27DA52950012715F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A11087F27DA52970012715F /* LaunchScreen.storyboard in Resources */,
+				0A1108EE27DA72E60012715F /* Payment.storyboard in Resources */,
+				0A1108E827DA70D80012715F /* UserAccount.storyboard in Resources */,
+				0A11087C27DA52970012715F /* Assets.xcassets in Resources */,
+				0A11087727DA52950012715F /* Main.storyboard in Resources */,
+				0A1108EC27DA71AD0012715F /* Categories.storyboard in Resources */,
+				0A1108EA27DA70FC0012715F /* ItemDetails.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A11088327DA52980012715F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A11088D27DA52980012715F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A11086827DA52950012715F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A11087027DA52950012715F /* AppDelegate.swift in Sources */,
+				0A11087227DA52950012715F /* SceneDelegate.swift in Sources */,
+				0A11087A27DA52950012715F /* Storak.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A11088127DA52980012715F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A11088A27DA52980012715F /* StorakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A11088B27DA52980012715F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A11089627DA52980012715F /* StorakUITestsLaunchTests.swift in Sources */,
+				0A11089427DA52980012715F /* StorakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A11088727DA52980012715F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A11086B27DA52950012715F /* Storak */;
+			targetProxy = 0A11088627DA52980012715F /* PBXContainerItemProxy */;
+		};
+		0A11089127DA52980012715F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A11086B27DA52950012715F /* Storak */;
+			targetProxy = 0A11089027DA52980012715F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A11087527DA52950012715F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A11087627DA52950012715F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A11087D27DA52970012715F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A11087E27DA52970012715F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A11089727DA52980012715F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A11089827DA52980012715F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A11089A27DA52980012715F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Storak/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.Storak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A11089B27DA52980012715F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Storak/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.Storak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0A11089D27DA52980012715F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.StorakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Storak.app/Storak";
+			};
+			name = Debug;
+		};
+		0A11089E27DA52980012715F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.StorakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Storak.app/Storak";
+			};
+			name = Release;
+		};
+		0A1108A027DA52980012715F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.StorakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Storak;
+			};
+			name = Debug;
+		};
+		0A1108A127DA52980012715F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iti.StorakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Storak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A11086727DA52950012715F /* Build configuration list for PBXProject "Storak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A11089727DA52980012715F /* Debug */,
+				0A11089827DA52980012715F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A11089927DA52980012715F /* Build configuration list for PBXNativeTarget "Storak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A11089A27DA52980012715F /* Debug */,
+				0A11089B27DA52980012715F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A11089C27DA52980012715F /* Build configuration list for PBXNativeTarget "StorakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A11089D27DA52980012715F /* Debug */,
+				0A11089E27DA52980012715F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A11089F27DA52980012715F /* Build configuration list for PBXNativeTarget "StorakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A1108A027DA52980012715F /* Debug */,
+				0A1108A127DA52980012715F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A11087827DA52950012715F /* Storak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A11087927DA52950012715F /* Storak.xcdatamodel */,
+			);
+			currentVersion = 0A11087927DA52950012715F /* Storak.xcdatamodel */;
+			path = Storak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0A11086427DA52950012715F /* Project object */;
+}
