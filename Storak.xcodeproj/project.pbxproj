@@ -20,6 +20,7 @@
 		0A1108EA27DA70FC0012715F /* ItemDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108E927DA70FC0012715F /* ItemDetails.storyboard */; };
 		0A1108EC27DA71AD0012715F /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108EB27DA71AD0012715F /* Categories.storyboard */; };
 		0A1108EE27DA72E60012715F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108ED27DA72E60012715F /* Payment.storyboard */; };
+		0A1108F527DBB4BE0012715F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1108F427DBB4BE0012715F /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0A1108E927DA70FC0012715F /* ItemDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetails.storyboard; sourceTree = "<group>"; };
 		0A1108EB27DA71AD0012715F /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		0A1108ED27DA72E60012715F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		0A1108F427DBB4BE0012715F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,8 @@
 				0A1108A427DA52BB0012715F /* ViewModels */,
 				0A1108A327DA52B40012715F /* Models */,
 				0A1108A227DA52AB0012715F /* Views */,
+				0A1108F627DBB59E0012715F /* PONSOs */,
+				0A1108F327DBB48F0012715F /* Constants */,
 				0A11086F27DA52950012715F /* AppDelegate.swift */,
 				0A11087127DA52950012715F /* SceneDelegate.swift */,
 				0A11087B27DA52970012715F /* Assets.xcassets */,
@@ -201,6 +205,21 @@
 				0A11087527DA52950012715F /* Main.storyboard */,
 			);
 			path = Soultan;
+			sourceTree = "<group>";
+		};
+		0A1108F327DBB48F0012715F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0A1108F427DBB4BE0012715F /* URLs.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0A1108F627DBB59E0012715F /* PONSOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PONSOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +360,7 @@
 				0A11087027DA52950012715F /* AppDelegate.swift in Sources */,
 				0A11087227DA52950012715F /* SceneDelegate.swift in Sources */,
 				0A11087A27DA52950012715F /* Storak.xcdatamodeld in Sources */,
+				0A1108F527DBB4BE0012715F /* URLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
