@@ -20,10 +20,11 @@ class CategoryCell: UITableViewCell {
     }
 
     func addShadowToCategoryImageView() {
-        imageContainer.layer.shadowColor = UIColor.lightGray.cgColor.copy(alpha: 0.5)
+        imageContainer.layer.shadowColor = UIColor.gray.cgColor.copy(alpha: 0.6)
         imageContainer.layer.shadowOpacity = 1
         imageContainer.layer.shadowOffset = .zero
         imageContainer.layer.shadowRadius = 10
+        imageContainer.layer.cornerRadius = 5
     }
   
     
