@@ -11,18 +11,19 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var numberOfCategoryItemsLabel: UILabel!
     @IBOutlet weak var categoryImageView: UIImageView!
+    @IBOutlet weak var imageContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       // addShadowToCategoryImageView()
+        addShadowToCategoryImageView()
         configure()
     }
 
     func addShadowToCategoryImageView() {
-        categoryImageView.layer.shadowColor = UIColor.black.cgColor
-        categoryImageView.layer.shadowOpacity = 1
-        categoryImageView.layer.shadowOffset = .zero
-        categoryImageView.layer.shadowRadius = 10
+        imageContainer.layer.shadowColor = UIColor.gray.cgColor
+        imageContainer.layer.shadowOpacity = 1
+        imageContainer.layer.shadowOffset = .zero
+        imageContainer.layer.shadowRadius = 10
     }
   
     
