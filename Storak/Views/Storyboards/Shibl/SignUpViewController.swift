@@ -9,16 +9,25 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var fnameTF: UITextField!
+    @IBOutlet weak var lnameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fnameTF.useUnderline()
+        lnameTF.useUnderline()
+        emailTF.useUnderline()
+        passwordTF.useUnderline()
     }
     
 
     @IBAction func signUp(_ sender: Any) {
+        
     }
     
     @IBAction func returnToSignIn(_ sender: Any) {
+        
     }
 }
