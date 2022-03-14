@@ -25,6 +25,10 @@
 		0A11099D27DE8BB80012715F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A11099C27DE8BB80012715F /* FirebaseAnalytics */; };
 		0A11099F27DE8BB80012715F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0A11099E27DE8BB80012715F /* FirebaseAuth */; };
 		0A1109A127DE8BB80012715F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1109A027DE8BB80012715F /* FirebaseCrashlytics */; };
+		CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */; };
+		CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66527DBFCB400893A3B /* LogInViewController.swift */; };
+		CE19C66827DBFCD900893A3B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66727DBFCD900893A3B /* SignUpViewController.swift */; };
+		CE19C66A27DC1D2100893A3B /* textFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66927DC1D2100893A3B /* textFieldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		0A1108ED27DA72E60012715F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		0A1108F427DBB4BE0012715F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		0A11099927DE80CA0012715F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		CE19C66527DBFCB400893A3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		CE19C66727DBFCD900893A3B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE19C66927DC1D2100893A3B /* textFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,10 @@
 			isa = PBXGroup;
 			children = (
 				0A1108E727DA70D80012715F /* UserAccount.storyboard */,
+				CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */,
+				CE19C66527DBFCB400893A3B /* LogInViewController.swift */,
+				CE19C66727DBFCD900893A3B /* SignUpViewController.swift */,
+				CE19C66927DC1D2100893A3B /* textFieldViewController.swift */,
 			);
 			path = Shibl;
 			sourceTree = "<group>";
@@ -375,8 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE19C66827DBFCD900893A3B /* SignUpViewController.swift in Sources */,
 				0A11087027DA52950012715F /* AppDelegate.swift in Sources */,
 				0A11087227DA52950012715F /* SceneDelegate.swift in Sources */,
+				CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */,
+				CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */,
+				CE19C66A27DC1D2100893A3B /* textFieldViewController.swift in Sources */,
 				0A11087A27DA52950012715F /* Storak.xcdatamodeld in Sources */,
 				0A1108F527DBB4BE0012715F /* URLs.swift in Sources */,
 			);
@@ -564,6 +580,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,6 +608,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
