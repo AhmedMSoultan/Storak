@@ -7,9 +7,11 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var fnameTF: UITextField!
     @IBOutlet weak var lnameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -22,20 +24,37 @@ class SignUpViewController: UIViewController {
         emailTF.useUnderline()
         passwordTF.useUnderline()
     }
-    
+   
 
     @IBAction func signUp(_ sender: Any) {
-        guard let name = fnameTF.text else {return}
-        guard let email = emailTF.text else {return}
-        guard let password = passwordTF.text else {return}
+//        guard let name = fnameTF.text else {return}
+//        guard let email = emailTF.text else {return}
+//        guard let password = passwordTF.text else {return}
+        // check if text feild is empty
+        let firstName = fnameTF.text!.trimmingCharacters (in:.whitespacesAndNewlines)
+        let lastName = lnameTF.text!.trimmingCharacters(in:.whitespacesAndNewlines)
+        let email = emailTF.text!.trimmingCharacters(in:.whitespacesAndNewlines)
+        let password = passwordTF.text!.trimmingCharacters(in:.whitespacesAndNewlines)
+        /// create yser in firebase
         Auth.auth().createUser(withEmail: email, password: password) { user, err in
             if err != nil {
-                print(err?.localizedDescription)
+                print("error is : \(String(describing: err?.localizedDescription))")
+                self.clearTF()
             }else{
+                // save f&l name in database
+                let db = Firestore.firestore()
+                db.collection("users").addDocument (data: ["firstname": firstName,"lastname":lastName, "uid": user!.user.uid ])
+                if err != nil {
+                       // Show error message
+                        print("Error saving user data")
+                }else{
                 print("creation is done")
-                let alert = UIAlertController(title: " Hi \(name) ", message: "You Are regesterd successfuly", preferredStyle: UIAlertController.Style.alert)
+                // alert for succses of registeration
+                let alert = UIAlertController(title: " Hi \(firstName) ", message: "You Are regesterd successfuly", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
+                self.clearTF()
+                }
             }
         }
     }
@@ -45,5 +64,12 @@ class SignUpViewController: UIViewController {
     @IBAction func returnToSignIn(_ sender: Any) {
         let signinVC = (storyboard?.instantiateViewController(withIdentifier: "signinVC")) as! LogInViewController
         navigationController?.pushViewController(signinVC, animated: true)
+    }
+    // to clear text feilds
+    func clearTF(){
+        self.emailTF.text = ""
+        self.passwordTF.text = ""
+        self.lnameTF.text = ""
+        self.fnameTF.text = ""
     }
 }

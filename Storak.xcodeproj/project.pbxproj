@@ -25,10 +25,17 @@
 		0A11099D27DE8BB80012715F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A11099C27DE8BB80012715F /* FirebaseAnalytics */; };
 		0A11099F27DE8BB80012715F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0A11099E27DE8BB80012715F /* FirebaseAuth */; };
 		0A1109A127DE8BB80012715F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1109A027DE8BB80012715F /* FirebaseCrashlytics */; };
+		59575CE061794F96D20A1EEC /* Pods_StorakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C987C00655A68E89CD8253BA /* Pods_StorakTests.framework */; };
+		6704ADC6D7F17BE534F5FCCF /* Pods_Storak_StorakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB54D94490973C94209E25CC /* Pods_Storak_StorakUITests.framework */; };
+		AF221686E355233AE5C7D356 /* Pods_Storak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D01218CFBF6F8A09F733FD /* Pods_Storak.framework */; };
+		CE16E05B27E16EE100FC473D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CE16E05A27E16EE100FC473D /* FirebaseDatabase */; };
+		CE16E05D27E16EE100FC473D /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CE16E05C27E16EE100FC473D /* FirebaseDatabaseSwift-Beta */; };
+		CE16E05F27E16EE100FC473D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE16E05E27E16EE100FC473D /* FirebaseFirestore */; };
+		CE16E06127E16EE100FC473D /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CE16E06027E16EE100FC473D /* FirebaseFirestoreCombine-Community */; };
+		CE16E06327E16EE100FC473D /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CE16E06227E16EE100FC473D /* FirebaseFirestoreSwift-Beta */; };
 		CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */; };
 		CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66527DBFCB400893A3B /* LogInViewController.swift */; };
 		CE19C66827DBFCD900893A3B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66727DBFCD900893A3B /* SignUpViewController.swift */; };
-		CE19C66A27DC1D2100893A3B /* textFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66927DC1D2100893A3B /* textFieldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D01218CFBF6F8A09F733FD /* Pods_Storak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A11086C27DA52950012715F /* Storak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A11086F27DA52950012715F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A11087127DA52950012715F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,10 +76,17 @@
 		0A1108ED27DA72E60012715F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		0A1108F427DBB4BE0012715F /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		0A11099927DE80CA0012715F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18782DC3281417CA8406DA4A /* Pods-StorakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorakTests.release.xcconfig"; path = "Target Support Files/Pods-StorakTests/Pods-StorakTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB54D94490973C94209E25CC /* Pods_Storak_StorakUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storak_StorakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFC9A1C5B51352F7154D980 /* Pods-Storak-StorakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak-StorakUITests.release.xcconfig"; path = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C987C00655A68E89CD8253BA /* Pods_StorakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		CE19C66527DBFCB400893A3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE19C66727DBFCD900893A3B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		CE19C66927DC1D2100893A3B /* textFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldViewController.swift; sourceTree = "<group>"; };
+		E0BB4AC2BD027BAC4B4F3BAF /* Pods-StorakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorakTests.debug.xcconfig"; path = "Target Support Files/Pods-StorakTests/Pods-StorakTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5ADD0C11722854723C68533 /* Pods-Storak-StorakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak-StorakUITests.debug.xcconfig"; path = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F85CC1475780085B9E438BC7 /* Pods-Storak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak.debug.xcconfig"; path = "Target Support Files/Pods-Storak/Pods-Storak.debug.xcconfig"; sourceTree = "<group>"; };
+		FFB524D7FE35E5CF18C67041 /* Pods-Storak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak.release.xcconfig"; path = "Target Support Files/Pods-Storak/Pods-Storak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +94,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE16E05D27E16EE100FC473D /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				CE16E06127E16EE100FC473D /* FirebaseFirestoreCombine-Community in Frameworks */,
+				CE16E05B27E16EE100FC473D /* FirebaseDatabase in Frameworks */,
 				0A1109A127DE8BB80012715F /* FirebaseCrashlytics in Frameworks */,
 				0A11099D27DE8BB80012715F /* FirebaseAnalytics in Frameworks */,
 				0A11099F27DE8BB80012715F /* FirebaseAuth in Frameworks */,
+				CE16E06327E16EE100FC473D /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				AF221686E355233AE5C7D356 /* Pods_Storak.framework in Frameworks */,
+				CE16E05F27E16EE100FC473D /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59575CE061794F96D20A1EEC /* Pods_StorakTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6704ADC6D7F17BE534F5FCCF /* Pods_Storak_StorakUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +132,8 @@
 				0A11088827DA52980012715F /* StorakTests */,
 				0A11089227DA52980012715F /* StorakUITests */,
 				0A11086D27DA52950012715F /* Products */,
+				F3E2128C435F562B641D0959 /* Pods */,
+				4C4F4683004ABA23A72DFCC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,7 +222,6 @@
 				CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */,
 				CE19C66527DBFCB400893A3B /* LogInViewController.swift */,
 				CE19C66727DBFCD900893A3B /* SignUpViewController.swift */,
-				CE19C66927DC1D2100893A3B /* textFieldViewController.swift */,
 			);
 			path = Shibl;
 			sourceTree = "<group>";
@@ -243,6 +267,29 @@
 			path = PONSOs;
 			sourceTree = "<group>";
 		};
+		4C4F4683004ABA23A72DFCC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09D01218CFBF6F8A09F733FD /* Pods_Storak.framework */,
+				AB54D94490973C94209E25CC /* Pods_Storak_StorakUITests.framework */,
+				C987C00655A68E89CD8253BA /* Pods_StorakTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3E2128C435F562B641D0959 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F85CC1475780085B9E438BC7 /* Pods-Storak.debug.xcconfig */,
+				FFB524D7FE35E5CF18C67041 /* Pods-Storak.release.xcconfig */,
+				F5ADD0C11722854723C68533 /* Pods-Storak-StorakUITests.debug.xcconfig */,
+				BFFC9A1C5B51352F7154D980 /* Pods-Storak-StorakUITests.release.xcconfig */,
+				E0BB4AC2BD027BAC4B4F3BAF /* Pods-StorakTests.debug.xcconfig */,
+				18782DC3281417CA8406DA4A /* Pods-StorakTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +297,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A11089927DA52980012715F /* Build configuration list for PBXNativeTarget "Storak" */;
 			buildPhases = (
+				13D163BAED9BB9ACF5A10826 /* [CP] Check Pods Manifest.lock */,
 				0A11086827DA52950012715F /* Sources */,
 				0A11086927DA52950012715F /* Frameworks */,
 				0A11086A27DA52950012715F /* Resources */,
@@ -263,6 +311,11 @@
 				0A11099C27DE8BB80012715F /* FirebaseAnalytics */,
 				0A11099E27DE8BB80012715F /* FirebaseAuth */,
 				0A1109A027DE8BB80012715F /* FirebaseCrashlytics */,
+				CE16E05A27E16EE100FC473D /* FirebaseDatabase */,
+				CE16E05C27E16EE100FC473D /* FirebaseDatabaseSwift-Beta */,
+				CE16E05E27E16EE100FC473D /* FirebaseFirestore */,
+				CE16E06027E16EE100FC473D /* FirebaseFirestoreCombine-Community */,
+				CE16E06227E16EE100FC473D /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = Storak;
 			productReference = 0A11086C27DA52950012715F /* Storak.app */;
@@ -272,6 +325,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A11089C27DA52980012715F /* Build configuration list for PBXNativeTarget "StorakTests" */;
 			buildPhases = (
+				6D2F432FB9C47F9CE1476029 /* [CP] Check Pods Manifest.lock */,
 				0A11088127DA52980012715F /* Sources */,
 				0A11088227DA52980012715F /* Frameworks */,
 				0A11088327DA52980012715F /* Resources */,
@@ -290,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A11089F27DA52980012715F /* Build configuration list for PBXNativeTarget "StorakUITests" */;
 			buildPhases = (
+				37A637D2B3B84D53FF491119 /* [CP] Check Pods Manifest.lock */,
 				0A11088B27DA52980012715F /* Sources */,
 				0A11088C27DA52980012715F /* Frameworks */,
 				0A11088D27DA52980012715F /* Resources */,
@@ -382,6 +437,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13D163BAED9BB9ACF5A10826 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Storak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37A637D2B3B84D53FF491119 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Storak-StorakUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D2F432FB9C47F9CE1476029 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StorakTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A11086827DA52950012715F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,7 +516,6 @@
 				0A11087227DA52950012715F /* SceneDelegate.swift in Sources */,
 				CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */,
 				CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */,
-				CE19C66A27DC1D2100893A3B /* textFieldViewController.swift in Sources */,
 				0A11087A27DA52950012715F /* Storak.xcdatamodeld in Sources */,
 				0A1108F527DBB4BE0012715F /* URLs.swift in Sources */,
 			);
@@ -568,6 +691,7 @@
 		};
 		0A11089A27DA52980012715F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F85CC1475780085B9E438BC7 /* Pods-Storak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -596,6 +720,7 @@
 		};
 		0A11089B27DA52980012715F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB524D7FE35E5CF18C67041 /* Pods-Storak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -624,6 +749,7 @@
 		};
 		0A11089D27DA52980012715F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0BB4AC2BD027BAC4B4F3BAF /* Pods-StorakTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -643,6 +769,7 @@
 		};
 		0A11089E27DA52980012715F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18782DC3281417CA8406DA4A /* Pods-StorakTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,6 +789,7 @@
 		};
 		0A1108A027DA52980012715F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5ADD0C11722854723C68533 /* Pods-Storak-StorakUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -679,6 +807,7 @@
 		};
 		0A1108A127DA52980012715F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFC9A1C5B51352F7154D980 /* Pods-Storak-StorakUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -761,6 +890,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		CE16E05A27E16EE100FC473D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CE16E05C27E16EE100FC473D /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		CE16E05E27E16EE100FC473D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CE16E06027E16EE100FC473D /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		CE16E06227E16EE100FC473D /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 

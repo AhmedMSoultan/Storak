@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class LogInViewController: UIViewController {
 
@@ -24,6 +26,21 @@ class LogInViewController: UIViewController {
     
    
     @IBAction func signIN(_ sender: Any) {
+        let email = emailTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTF.text!.trimmingCharacters(in:
+             .whitespacesAndNewlines)
+        Auth.auth().signIn(withEmail: email, password: password) {
+            (user, err) in
+           if err != nil {
+               // Couldn't sign in
+               print("error is : \(String(describing: err?.localizedDescription))")
+           }else {
+               print("sign in succses")
+           }
+            self.emailTF.text = ""
+            self.passwordTF.text = ""
+        }
+        
     }
     @IBAction func goTosignUp(_ sender: Any) {
         let signupVC = (storyboard?.instantiateViewController(withIdentifier: "signupVC")) as! SignUpViewController

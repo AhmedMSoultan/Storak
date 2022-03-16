@@ -1,0 +1,6 @@
+framework module Pods_StorakTests {
+  umbrella header "Pods-StorakTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

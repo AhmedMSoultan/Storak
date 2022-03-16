@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57F947683222F22E0018FA744E4D99C6 /* Pods-StorakTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB042D0119BF0C95607B4D23DCFCD4 /* Pods-StorakTests-dummy.m */; };
+		6D98CC5FCFBC1D24AE1459FB7AD84790 /* Pods-Storak-StorakUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 187AE7003262D312A6F2207BB81B4AD1 /* Pods-Storak-StorakUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EBC850B9A5D13132AA81636E5145159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8C84212CECECCF041B6BB3E2A7B9ACA2 /* Pods-StorakTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9D3C1D32646DCDF5BF0CF1733606284 /* Pods-StorakTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96A73DFA666D8C8E78E119220B8CA21C /* Pods-Storak-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F233A18057E275E285E367EF7082C1 /* Pods-Storak-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4097F651D4ED2C00B2245028F556F3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D7A04874C7EE5F8539BE64C41181C563 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D7EA1A1C2A2E49EAD9A5C08A5CE0E5CE /* Pods-Storak-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F4C0C74E583B4B7AF1ADD9C3E2B9 /* Pods-Storak-dummy.m */; };
+		F2C0AE57709E03623D451ECBF3926404 /* Pods-Storak-StorakUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AF4BEECA69243D25B6CCC8D2A5D47D /* Pods-Storak-StorakUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD8A23A481DF1588264982DA514E1730 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0928BDD94D15A317F3F6FF7421EF081C;
+			remoteInfo = "Pods-Storak";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0908F57803B16832B3BC719859D8EE7A /* Pods-Storak-StorakUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Storak-StorakUITests"; path = Pods_Storak_StorakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6805A6D9BFD1CCB296B5EBE916EEAF /* Pods-Storak-StorakUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Storak-StorakUITests-Info.plist"; sourceTree = "<group>"; };
+		10267AB397789DA0656BA8775965A01A /* Pods-Storak-StorakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Storak-StorakUITests.release.xcconfig"; sourceTree = "<group>"; };
+		10AF4BEECA69243D25B6CCC8D2A5D47D /* Pods-Storak-StorakUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Storak-StorakUITests-dummy.m"; sourceTree = "<group>"; };
+		122A10342D8F4125C781B942DD1161F8 /* Pods-StorakTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StorakTests.modulemap"; sourceTree = "<group>"; };
+		1666047EBDC34D7DB6B4D4AF9974E241 /* Pods-Storak-StorakUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Storak-StorakUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		187AE7003262D312A6F2207BB81B4AD1 /* Pods-Storak-StorakUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Storak-StorakUITests-umbrella.h"; sourceTree = "<group>"; };
+		1F3A1796B7E703D5DB782B9E53FB62A3 /* Pods-Storak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Storak.release.xcconfig"; sourceTree = "<group>"; };
+		200D9AAD394FC04BD588EA3070F48C89 /* Pods-StorakTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StorakTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		21876807C836F89C698BE2A542092FF6 /* Pods-Storak-StorakUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Storak-StorakUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2AFFAF71F0163468959A6B479A37DF70 /* Pods-Storak-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Storak-acknowledgements.plist"; sourceTree = "<group>"; };
+		2E89F0DAB565B4AF83006E973815963B /* Pods-Storak-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Storak-Info.plist"; sourceTree = "<group>"; };
+		54F233A18057E275E285E367EF7082C1 /* Pods-Storak-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Storak-umbrella.h"; sourceTree = "<group>"; };
+		59505533C6EE2C1E4788527A77FB2A18 /* Pods-Storak-StorakUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Storak-StorakUITests.modulemap"; sourceTree = "<group>"; };
+		5AD4D98CE2FD7C232E74BFD61E879C7F /* Pods-Storak-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Storak-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8D8272D07CD710BA21E403C7CBE8F375 /* Pods-Storak.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Storak.modulemap"; sourceTree = "<group>"; };
+		9044848B07A87F481C7E040F2ECDE5C4 /* Pods-StorakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StorakTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9665211065E74C80A0000742438222BF /* Pods-StorakTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StorakTests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ADAE733132596A328CAC5736056EF4CE /* Pods-Storak-StorakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Storak-StorakUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCFB042D0119BF0C95607B4D23DCFCD4 /* Pods-StorakTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StorakTests-dummy.m"; sourceTree = "<group>"; };
+		D33A5D684E2986CF465DC9E6E3D157EB /* Pods-Storak */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Storak"; path = Pods_Storak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5497662E44740CFDB849971D2FF67C8 /* Pods-StorakTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StorakTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E657F4C0C74E583B4B7AF1ADD9C3E2B9 /* Pods-Storak-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Storak-dummy.m"; sourceTree = "<group>"; };
+		E9D3C1D32646DCDF5BF0CF1733606284 /* Pods-StorakTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StorakTests-umbrella.h"; sourceTree = "<group>"; };
+		ED167F0B0A5CAEDD9BD0C786509C14A3 /* Pods-Storak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Storak.debug.xcconfig"; sourceTree = "<group>"; };
+		EE60AFFE8550440A2CC80D0162EC13C2 /* Pods-StorakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StorakTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC0BFC34E82E7AEA7DBBEE8828598F7C /* Pods-StorakTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StorakTests"; path = Pods_StorakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18642559E9A89B8D03038D42E8E80BFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EBC850B9A5D13132AA81636E5145159 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9127CF093936B1CE6627308B86768E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A04874C7EE5F8539BE64C41181C563 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A9F7D253DF513635E087D1584FF05C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4097F651D4ED2C00B2245028F556F3A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E41CB2833D8346465154F54501EB40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D33A5D684E2986CF465DC9E6E3D157EB /* Pods-Storak */,
+				0908F57803B16832B3BC719859D8EE7A /* Pods-Storak-StorakUITests */,
+				FC0BFC34E82E7AEA7DBBEE8828598F7C /* Pods-StorakTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		489BB07AD0D4A299978569DF5EE1DB79 /* Pods-StorakTests */ = {
+			isa = PBXGroup;
+			children = (
+				122A10342D8F4125C781B942DD1161F8 /* Pods-StorakTests.modulemap */,
+				200D9AAD394FC04BD588EA3070F48C89 /* Pods-StorakTests-acknowledgements.markdown */,
+				E5497662E44740CFDB849971D2FF67C8 /* Pods-StorakTests-acknowledgements.plist */,
+				CCFB042D0119BF0C95607B4D23DCFCD4 /* Pods-StorakTests-dummy.m */,
+				9665211065E74C80A0000742438222BF /* Pods-StorakTests-Info.plist */,
+				E9D3C1D32646DCDF5BF0CF1733606284 /* Pods-StorakTests-umbrella.h */,
+				9044848B07A87F481C7E040F2ECDE5C4 /* Pods-StorakTests.debug.xcconfig */,
+				EE60AFFE8550440A2CC80D0162EC13C2 /* Pods-StorakTests.release.xcconfig */,
+			);
+			name = "Pods-StorakTests";
+			path = "Target Support Files/Pods-StorakTests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A6F73BFC09813B43A3C55A1CF0E81CC /* Pods-Storak-StorakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59505533C6EE2C1E4788527A77FB2A18 /* Pods-Storak-StorakUITests.modulemap */,
+				1666047EBDC34D7DB6B4D4AF9974E241 /* Pods-Storak-StorakUITests-acknowledgements.markdown */,
+				21876807C836F89C698BE2A542092FF6 /* Pods-Storak-StorakUITests-acknowledgements.plist */,
+				10AF4BEECA69243D25B6CCC8D2A5D47D /* Pods-Storak-StorakUITests-dummy.m */,
+				0A6805A6D9BFD1CCB296B5EBE916EEAF /* Pods-Storak-StorakUITests-Info.plist */,
+				187AE7003262D312A6F2207BB81B4AD1 /* Pods-Storak-StorakUITests-umbrella.h */,
+				ADAE733132596A328CAC5736056EF4CE /* Pods-Storak-StorakUITests.debug.xcconfig */,
+				10267AB397789DA0656BA8775965A01A /* Pods-Storak-StorakUITests.release.xcconfig */,
+			);
+			name = "Pods-Storak-StorakUITests";
+			path = "Target Support Files/Pods-Storak-StorakUITests";
+			sourceTree = "<group>";
+		};
+		B1CD738275350ECC339DD4C2A4BF8269 /* Pods-Storak */ = {
+			isa = PBXGroup;
+			children = (
+				8D8272D07CD710BA21E403C7CBE8F375 /* Pods-Storak.modulemap */,
+				5AD4D98CE2FD7C232E74BFD61E879C7F /* Pods-Storak-acknowledgements.markdown */,
+				2AFFAF71F0163468959A6B479A37DF70 /* Pods-Storak-acknowledgements.plist */,
+				E657F4C0C74E583B4B7AF1ADD9C3E2B9 /* Pods-Storak-dummy.m */,
+				2E89F0DAB565B4AF83006E973815963B /* Pods-Storak-Info.plist */,
+				54F233A18057E275E285E367EF7082C1 /* Pods-Storak-umbrella.h */,
+				ED167F0B0A5CAEDD9BD0C786509C14A3 /* Pods-Storak.debug.xcconfig */,
+				1F3A1796B7E703D5DB782B9E53FB62A3 /* Pods-Storak.release.xcconfig */,
+			);
+			name = "Pods-Storak";
+			path = "Target Support Files/Pods-Storak";
+			sourceTree = "<group>";
+		};
+		C12926970152C80D9ED6A6684B1402B4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1CD738275350ECC339DD4C2A4BF8269 /* Pods-Storak */,
+				5A6F73BFC09813B43A3C55A1CF0E81CC /* Pods-Storak-StorakUITests */,
+				489BB07AD0D4A299978569DF5EE1DB79 /* Pods-StorakTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				04E41CB2833D8346465154F54501EB40 /* Products */,
+				C12926970152C80D9ED6A6684B1402B4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		31EBEB209477BFE674B37C8FD1BD0432 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C84212CECECCF041B6BB3E2A7B9ACA2 /* Pods-StorakTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		574D25CC46C7FE04A2997EF81A645965 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D98CC5FCFBC1D24AE1459FB7AD84790 /* Pods-Storak-StorakUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D06147DE1FA1FBD4C8C166060D3781 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A73DFA666D8C8E78E119220B8CA21C /* Pods-Storak-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0928BDD94D15A317F3F6FF7421EF081C /* Pods-Storak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EB94979BD95CA4725697FBDFC3D7E22 /* Build configuration list for PBXNativeTarget "Pods-Storak" */;
+			buildPhases = (
+				90D06147DE1FA1FBD4C8C166060D3781 /* Headers */,
+				FFF93A7A6EF7BD1A7C9C5B8F4FDE7B56 /* Sources */,
+				5A9127CF093936B1CE6627308B86768E /* Frameworks */,
+				CC84DEC2FAE619F813899A96ED89E39C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Storak";
+			productName = Pods_Storak;
+			productReference = D33A5D684E2986CF465DC9E6E3D157EB /* Pods-Storak */;
+			productType = "com.apple.product-type.framework";
+		};
+		616479D5CB0D3D0C683F009E6B99A529 /* Pods-Storak-StorakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E42F60B1298C2968F39293D8C96C39AC /* Build configuration list for PBXNativeTarget "Pods-Storak-StorakUITests" */;
+			buildPhases = (
+				574D25CC46C7FE04A2997EF81A645965 /* Headers */,
+				25DAC3AB656A8E753D6CA78D436A431D /* Sources */,
+				8A9F7D253DF513635E087D1584FF05C9 /* Frameworks */,
+				BE69D7A6D96190DB2D115364EAF83397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Storak-StorakUITests";
+			productName = Pods_Storak_StorakUITests;
+			productReference = 0908F57803B16832B3BC719859D8EE7A /* Pods-Storak-StorakUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9DFECA2A583F7C509CBFF18EB4693E6 /* Pods-StorakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09708C8E7557DF4D56AF74F838E453DB /* Build configuration list for PBXNativeTarget "Pods-StorakTests" */;
+			buildPhases = (
+				31EBEB209477BFE674B37C8FD1BD0432 /* Headers */,
+				FF1B4CB0F265C2F77FC27C5E82BCBB3C /* Sources */,
+				18642559E9A89B8D03038D42E8E80BFD /* Frameworks */,
+				824E00B9C3CB0B32D0CF60C3D58855C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4A47AE35A15DC2FDD75E1471CC6ADF3 /* PBXTargetDependency */,
+			);
+			name = "Pods-StorakTests";
+			productName = Pods_StorakTests;
+			productReference = FC0BFC34E82E7AEA7DBBEE8828598F7C /* Pods-StorakTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 04E41CB2833D8346465154F54501EB40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0928BDD94D15A317F3F6FF7421EF081C /* Pods-Storak */,
+				616479D5CB0D3D0C683F009E6B99A529 /* Pods-Storak-StorakUITests */,
+				E9DFECA2A583F7C509CBFF18EB4693E6 /* Pods-StorakTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		824E00B9C3CB0B32D0CF60C3D58855C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE69D7A6D96190DB2D115364EAF83397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC84DEC2FAE619F813899A96ED89E39C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25DAC3AB656A8E753D6CA78D436A431D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C0AE57709E03623D451ECBF3926404 /* Pods-Storak-StorakUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF1B4CB0F265C2F77FC27C5E82BCBB3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F947683222F22E0018FA744E4D99C6 /* Pods-StorakTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF93A7A6EF7BD1A7C9C5B8F4FDE7B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7EA1A1C2A2E49EAD9A5C08A5CE0E5CE /* Pods-Storak-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4A47AE35A15DC2FDD75E1471CC6ADF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Storak";
+			target = 0928BDD94D15A317F3F6FF7421EF081C /* Pods-Storak */;
+			targetProxy = FD8A23A481DF1588264982DA514E1730 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6B7EAF6EE9FBD0CA9546024CCBFDEB62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10267AB397789DA0656BA8775965A01A /* Pods-Storak-StorakUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80F83EC2FEF900B0D232C6695D13ED81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9044848B07A87F481C7E040F2ECDE5C4 /* Pods-StorakTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StorakTests/Pods-StorakTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StorakTests/Pods-StorakTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AEF0553D11CB8796B001D09F690A0452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE60AFFE8550440A2CC80D0162EC13C2 /* Pods-StorakTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StorakTests/Pods-StorakTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StorakTests/Pods-StorakTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B8CB18293DD97B8A6E194FEEA3F044B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED167F0B0A5CAEDD9BD0C786509C14A3 /* Pods-Storak.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Storak/Pods-Storak-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Storak/Pods-Storak.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E87C977C0125A8AFD986B9959DEA324E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADAE733132596A328CAC5736056EF4CE /* Pods-Storak-StorakUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED7C2B3B468556BB29CEB3E74B7FFC76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F3A1796B7E703D5DB782B9E53FB62A3 /* Pods-Storak.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Storak/Pods-Storak-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Storak/Pods-Storak.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09708C8E7557DF4D56AF74F838E453DB /* Build configuration list for PBXNativeTarget "Pods-StorakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F83EC2FEF900B0D232C6695D13ED81 /* Debug */,
+				AEF0553D11CB8796B001D09F690A0452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EB94979BD95CA4725697FBDFC3D7E22 /* Build configuration list for PBXNativeTarget "Pods-Storak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CB18293DD97B8A6E194FEEA3F044B9 /* Debug */,
+				ED7C2B3B468556BB29CEB3E74B7FFC76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E42F60B1298C2968F39293D8C96C39AC /* Build configuration list for PBXNativeTarget "Pods-Storak-StorakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87C977C0125A8AFD986B9959DEA324E /* Debug */,
+				6B7EAF6EE9FBD0CA9546024CCBFDEB62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
