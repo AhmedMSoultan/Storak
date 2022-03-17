@@ -16,27 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWo-8N-rWI">
-                                <rect key="frame" x="118" y="44" width="179" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWo-8N-rWI">
+                                <rect key="frame" x="125" y="44" width="164.5" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-rg-ZjI">
-                                <rect key="frame" x="0.0" y="86" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-rg-ZjI">
+                                <rect key="frame" x="0.0" y="86" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XHb-3d-FVh">
-                                <rect key="frame" x="0.0" y="130" width="414" height="683"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XHb-3d-FVh">
+                                <rect key="frame" x="0.0" y="137" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3m7-Qj-pEt"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fQd-rg-ZjI" firstAttribute="top" secondItem="EWo-8N-rWI" secondAttribute="bottom" constant="2" id="6k3-GI-XKt"/>
+                            <constraint firstItem="EWo-8N-rWI" firstAttribute="centerX" secondItem="uVC-BQ-KLZ" secondAttribute="centerX" id="9SQ-F0-Q6N"/>
+                            <constraint firstItem="EWo-8N-rWI" firstAttribute="centerX" secondItem="fQd-rg-ZjI" secondAttribute="centerX" id="D1G-RX-aB8"/>
+                            <constraint firstItem="fQd-rg-ZjI" firstAttribute="top" secondItem="uVC-BQ-KLZ" secondAttribute="top" constant="86" id="E7j-Ez-YU9"/>
+                            <constraint firstItem="XHb-3d-FVh" firstAttribute="top" secondItem="fQd-rg-ZjI" secondAttribute="bottom" id="IHZ-Dv-hka"/>
+                            <constraint firstItem="fQd-rg-ZjI" firstAttribute="leading" secondItem="XHb-3d-FVh" secondAttribute="leading" id="VEA-CW-Xfa"/>
+                            <constraint firstItem="XHb-3d-FVh" firstAttribute="leading" secondItem="3m7-Qj-pEt" secondAttribute="leading" id="Vnm-sp-xl6"/>
+                            <constraint firstItem="XHb-3d-FVh" firstAttribute="trailing" secondItem="3m7-Qj-pEt" secondAttribute="trailing" id="Ye3-hv-zdF"/>
+                            <constraint firstItem="EWo-8N-rWI" firstAttribute="top" secondItem="3m7-Qj-pEt" secondAttribute="top" id="fja-ld-QtF"/>
+                            <constraint firstItem="XHb-3d-FVh" firstAttribute="bottom" secondItem="3m7-Qj-pEt" secondAttribute="bottom" id="lPi-l8-F1a"/>
+                            <constraint firstItem="fQd-rg-ZjI" firstAttribute="trailing" secondItem="XHb-3d-FVh" secondAttribute="trailing" id="t0H-8y-TeN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" image="rectangle.grid.2x2" catalog="system" id="zgc-Hg-A3O"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
