@@ -4,7 +4,7 @@
 target 'Storak' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+	pod 'SDWebImage', '~> 5.0'
   target 'StorakTests' do
     inherit! :search_paths
     # Pods for testing
