@@ -19,10 +19,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fnameTF.useUnderline()
-        lnameTF.useUnderline()
-        emailTF.useUnderline()
-        passwordTF.useUnderline()
+        styleTF()
     }
    
 
@@ -72,4 +69,10 @@ class SignUpViewController: UIViewController {
         self.lnameTF.text = ""
         self.fnameTF.text = ""
     }
+    func styleTF(){
+        fnameTF.useUnderline()
+        lnameTF.useUnderline()
+        emailTF.useUnderline()
+        passwordTF.useUnderline()
+}
 }

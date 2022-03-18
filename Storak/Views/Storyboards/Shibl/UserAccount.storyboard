@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SiO-DJ-o69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734.7826086956522" y="128.57142857142856"/>
+            <point key="canvasLocation" x="1839" y="129"/>
         </scene>
         <!--My Account-->
         <scene sceneID="VDF-7f-BNe">
@@ -369,66 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O21-pp-UHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450.7246376811595" y="128.57142857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2WJ-Hc-5IO">
-            <objects>
-                <viewController id="Bt4-KE-T3P" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lEv-fb-XM6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-t2-QUG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cig-G9-qgI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-pg-4pp">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="862"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chiar" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-zm-u0v">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="862" id="R0U-g5-Mf0"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1vI-d7-fxN">
-                                                <rect key="frame" x="414" y="0.0" width="0.0" height="862"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="B4b-zm-u0v" secondAttribute="trailing" id="1ve-XK-328"/>
-                                            <constraint firstItem="B4b-zm-u0v" firstAttribute="leading" secondItem="Cig-G9-qgI" secondAttribute="leading" id="Rxr-Ro-eX4"/>
-                                            <constraint firstItem="B4b-zm-u0v" firstAttribute="top" secondItem="Cig-G9-qgI" secondAttribute="top" id="gNu-l4-5DS"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Cig-G9-qgI" secondAttribute="trailing" id="3ut-5M-Aaw"/>
-                                    <constraint firstItem="Cig-G9-qgI" firstAttribute="width" secondItem="ZTZ-t2-QUG" secondAttribute="width" id="LDS-yd-pA7"/>
-                                    <constraint firstItem="Cig-G9-qgI" firstAttribute="leading" secondItem="ZTZ-t2-QUG" secondAttribute="leading" id="Lo4-ko-yEq"/>
-                                    <constraint firstItem="Cig-G9-qgI" firstAttribute="top" secondItem="ZTZ-t2-QUG" secondAttribute="top" id="djc-Gt-dGg"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cig-G9-qgI" secondAttribute="bottom" id="jh6-Df-foD"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="hdm-jf-bm8"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="VpK-bS-Diz"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="LKe-g7-dH0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ZTZ-t2-QUG" firstAttribute="trailing" secondItem="LKe-g7-dH0" secondAttribute="trailing" id="7rS-39-lKw"/>
-                            <constraint firstItem="ZTZ-t2-QUG" firstAttribute="leading" secondItem="LKe-g7-dH0" secondAttribute="leading" id="Gbe-JV-3th"/>
-                            <constraint firstAttribute="bottom" secondItem="ZTZ-t2-QUG" secondAttribute="bottom" id="nBJ-PG-fLp"/>
-                            <constraint firstItem="ZTZ-t2-QUG" firstAttribute="top" secondItem="LKe-g7-dH0" secondAttribute="top" id="xHM-WJ-fXh"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MDY-xW-GEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3250.7246376811595" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2526" y="129"/>
         </scene>
     </scenes>
     <resources>
