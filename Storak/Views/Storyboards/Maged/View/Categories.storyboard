@@ -8,20 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Categories View Controller-->
+        <!--Categories-->
         <scene sceneID="lZj-SY-PJj">
             <objects>
-                <viewController id="SMm-c2-p5F" customClass="CategoriesViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="SMm-c2-p5F" customClass="CategoriesViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uVC-BQ-KLZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWo-8N-rWI">
-                                <rect key="frame" x="125" y="45.5" width="164.5" height="38.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-rg-ZjI">
                                 <rect key="frame" x="0.0" y="86" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -35,9 +29,6 @@
                         <viewLayoutGuide key="safeArea" id="3m7-Qj-pEt"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fQd-rg-ZjI" firstAttribute="top" secondItem="EWo-8N-rWI" secondAttribute="bottom" constant="2" id="6k3-GI-XKt"/>
-                            <constraint firstItem="EWo-8N-rWI" firstAttribute="centerX" secondItem="uVC-BQ-KLZ" secondAttribute="centerX" id="9SQ-F0-Q6N"/>
-                            <constraint firstItem="EWo-8N-rWI" firstAttribute="centerX" secondItem="fQd-rg-ZjI" secondAttribute="centerX" id="D1G-RX-aB8"/>
                             <constraint firstItem="fQd-rg-ZjI" firstAttribute="top" secondItem="uVC-BQ-KLZ" secondAttribute="top" constant="86" id="E7j-Ez-YU9"/>
                             <constraint firstItem="XHb-3d-FVh" firstAttribute="top" secondItem="fQd-rg-ZjI" secondAttribute="bottom" id="IHZ-Dv-hka"/>
                             <constraint firstItem="fQd-rg-ZjI" firstAttribute="leading" secondItem="XHb-3d-FVh" secondAttribute="leading" id="VEA-CW-Xfa"/>
@@ -47,7 +38,7 @@
                             <constraint firstItem="fQd-rg-ZjI" firstAttribute="trailing" secondItem="XHb-3d-FVh" secondAttribute="trailing" id="t0H-8y-TeN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wZ0-YR-GOx"/>
+                    <navigationItem key="navigationItem" title="Categories" id="wZ0-YR-GOx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoriesTableView" destination="XHb-3d-FVh" id="fhn-4l-ncl"/>
@@ -61,7 +52,7 @@
         <!--Products-->
         <scene sceneID="1r4-bf-Cdl">
             <objects>
-                <viewController id="fVj-za-nqN" customClass="ProductsViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fVj-za-nqN" customClass="ProductsViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pyj-yV-gCP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +85,7 @@
                                     <segment title="SALES"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentedDidChanged:" destination="fVj-za-nqN" eventType="valueChanged" id="50M-YU-gNk"/>
+                                    <action selector="switchSelectedSegment:" destination="fVj-za-nqN" eventType="valueChanged" id="3ds-uA-Nfc"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -117,8 +108,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Products" id="8zq-Aj-fKU">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="heart" catalog="system" id="rQs-Ax-sgH"/>
-                            <barButtonItem title="Item" image="cart" catalog="system" id="pvo-c2-t3N"/>
+                            <barButtonItem title="Item" image="heart" catalog="system" id="rQs-Ax-sgH">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="cart" catalog="system" id="pvo-c2-t3N">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -139,6 +134,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ee7-4w-VpV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

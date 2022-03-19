@@ -15,17 +15,27 @@ class ItemCell: UICollectionViewCell {
     @IBOutlet weak var productPriceLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        addShadowToProductCell()
     }
 
-//    func addShadowToProductCell() {
-//        ItemCell.layer.backgroundColor = UIColor.white.cgColor
-//        ItemCell.layer.shadowColor = UIColor.black.cgColor
-//        ItemCell.layer.shadowOpacity = 0.1
-//        ItemCell.layer.masksToBounds = false
-//        ItemCell.layer.shadowOffset = .zero
-//        ItemCell.layer.shadowRadius = 7
-//        ItemCell.layer.cornerRadius = 5
-//    }
+    func addShadowToProductCell() {
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.1
+        self.layer.masksToBounds = false
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 7
+        self.layer.cornerRadius = 5
+    }
+    
+}
+extension ItemCell {
+    
+    func configure() {
+        
+        productImage.image = UIImage(named: "Path544")
+        
+    }
     
 }

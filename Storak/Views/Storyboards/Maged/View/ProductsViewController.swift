@@ -9,16 +9,20 @@ import UIKit
 
 class ProductsViewController: UIViewController {
     
+    var selectedSegment: Int!
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var productsCollectionView: UICollectionView!
-    @IBAction func segmentedDidChanged(_ sender: Any) {
-        
-        
-        
+  
+    @IBAction func switchSelectedSegment(_ sender: UISegmentedControl) {
+        selectedSegment = sender.selectedSegmentIndex
+        productsCollectionView.reloadData()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selectedSegment = 0
         productsCollectionView.register(cellType: ItemCell.self)
         
     }
@@ -32,19 +36,19 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withType: ItemCell.self, for: indexPath)
-        cell.layer.backgroundColor = UIColor.white.cgColor
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOpacity = 0.1
-        cell.layer.masksToBounds = false
-        cell.layer.shadowOffset = .zero
-        cell.layer.shadowRadius = 7
-        cell.layer.cornerRadius = 5
+        
+        switch selectedSegment {
+        case 0:
+            cell.productImage.image = UIImage(named: "Path544")
+        default:
+            cell.productImage.image = UIImage(named: "Path541")
+        }
+
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        return CGSize(width: 200, height: 200)
         return CGSize(width: collectionView.frame.size.width/2.5, height: collectionView.frame.size.height/3.3)
     }
 }
