@@ -35,6 +35,7 @@
             <point key="canvasLocation" x="139" y="129"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="circle.grid.2x2" catalog="system" width="128" height="112"/>
         <systemColor name="systemPurpleColor">
