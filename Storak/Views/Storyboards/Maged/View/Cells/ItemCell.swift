@@ -29,6 +29,14 @@ class ItemCell: UICollectionViewCell {
         self.layer.cornerRadius = 5
     }
     
+    override var isSelected: Bool{
+            didSet{
+                UIView.animate(withDuration: 0.5) {
+                    self.productImage.transform = self.isSelected ? CGAffineTransform(scaleX: 0.8, y: 0.8) : CGAffineTransform.identity
+                }
+            }
+        }
+    
 }
 extension ItemCell {
     
