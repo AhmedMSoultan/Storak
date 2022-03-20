@@ -45,11 +45,11 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-E2-DC0">
-                                <rect key="frame" x="90" y="17.5" width="174.5" height="30.5"/>
+                                <rect key="frame" x="90" y="16.5" width="174.5" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furniture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2Q-Xg-ByG">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="30.5"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
