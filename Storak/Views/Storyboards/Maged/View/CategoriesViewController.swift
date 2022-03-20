@@ -27,13 +27,24 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withType: CategoryCell.self, for: indexPath)
         cell.selectionStyle = .none
+        
+        switch (indexPath.row) {
+        case 0:
+            cell.categoryNameLabel.text = "Men"
+        case 1:
+            cell.categoryNameLabel.text = "Women"
+        case 2:
+            cell.categoryNameLabel.text = "Kids"
+        default:
+            cell.categoryNameLabel.text = "Sales"
+        }
         
         return cell
     }

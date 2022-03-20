@@ -9,7 +9,6 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryNameLabel: UILabel!
-    @IBOutlet weak var numberOfCategoryItemsLabel: UILabel!
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var imageContainer: UIView!
     

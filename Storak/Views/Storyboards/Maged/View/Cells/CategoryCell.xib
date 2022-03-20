@@ -45,18 +45,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-E2-DC0">
-                                <rect key="frame" x="90" y="6" width="174.5" height="53"/>
+                                <rect key="frame" x="90" y="17.5" width="174.5" height="30.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furniture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2Q-Xg-ByG">
-                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="24"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="142 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn9-9x-WY6">
-                                        <rect key="frame" x="0.0" y="36" width="65.5" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -75,7 +69,6 @@
                 <outlet property="categoryImageView" destination="bMs-ce-GBI" id="b3g-Fu-jTh"/>
                 <outlet property="categoryNameLabel" destination="S2Q-Xg-ByG" id="Ypp-zc-d6X"/>
                 <outlet property="imageContainer" destination="Clm-di-YOC" id="ChG-Y7-D02"/>
-                <outlet property="numberOfCategoryItemsLabel" destination="wn9-9x-WY6" id="Eig-zS-Pm7"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="82.03125"/>
         </tableViewCell>

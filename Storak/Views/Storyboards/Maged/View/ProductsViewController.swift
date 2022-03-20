@@ -42,10 +42,8 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
             cell.productImage.image = UIImage(named: "Chair1")
         case 1:
             cell.productImage.image = UIImage(named: "Chair2")
-        case 2:
-            cell.productImage.image = UIImage(named: "Chair3")
         default:
-            cell.productImage.image = UIImage(named: "Chair4")
+            cell.productImage.image = UIImage(named: "Chair3")
         }
         
         return cell
