@@ -16,26 +16,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Path541" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-GY-fIm">
-                        <rect key="frame" x="0.0" y="8" width="200" height="196"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furniture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-7q-8Pt">
-                        <rect key="frame" x="0.0" y="206" width="200" height="12"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RuR-bq-FMz">
+                        <rect key="frame" x="5" y="5" width="190" height="210"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Path541" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-GY-fIm">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="168"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furniture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-7q-8Pt">
+                                <rect key="frame" x="0.0" y="168" width="190" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qJq-7q-8Pt" secondAttribute="bottom" id="69o-gn-9dp"/>
+                            <constraint firstAttribute="trailing" secondItem="fEB-GY-fIm" secondAttribute="trailing" id="7uk-Ry-wsD"/>
+                            <constraint firstItem="fEB-GY-fIm" firstAttribute="height" secondItem="RuR-bq-FMz" secondAttribute="height" multiplier="0.8" id="KQj-U3-nWr"/>
+                            <constraint firstItem="fEB-GY-fIm" firstAttribute="top" secondItem="RuR-bq-FMz" secondAttribute="top" id="MBb-FA-F65"/>
+                            <constraint firstItem="qJq-7q-8Pt" firstAttribute="leading" secondItem="RuR-bq-FMz" secondAttribute="leading" id="bXu-T4-2zJ"/>
+                            <constraint firstItem="fEB-GY-fIm" firstAttribute="width" secondItem="RuR-bq-FMz" secondAttribute="width" id="ddu-4T-RvL"/>
+                            <constraint firstAttribute="trailing" secondItem="qJq-7q-8Pt" secondAttribute="trailing" id="lZy-Cw-kEp"/>
+                            <constraint firstItem="fEB-GY-fIm" firstAttribute="leading" secondItem="RuR-bq-FMz" secondAttribute="leading" id="nZ9-0f-Erh"/>
+                            <constraint firstItem="qJq-7q-8Pt" firstAttribute="width" secondItem="RuR-bq-FMz" secondAttribute="width" id="nZo-5n-Yes"/>
+                            <constraint firstItem="qJq-7q-8Pt" firstAttribute="height" secondItem="RuR-bq-FMz" secondAttribute="height" multiplier="0.2" id="sWF-C8-sZz"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="fEB-GY-fIm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="95d-mK-ofW"/>
-                <constraint firstItem="qJq-7q-8Pt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CNd-wD-kEv"/>
-                <constraint firstItem="qJq-7q-8Pt" firstAttribute="top" secondItem="fEB-GY-fIm" secondAttribute="bottom" constant="2" id="CYI-gC-ncv"/>
-                <constraint firstAttribute="bottom" secondItem="qJq-7q-8Pt" secondAttribute="bottom" constant="2" id="Zwq-5m-wsU"/>
-                <constraint firstAttribute="trailing" secondItem="qJq-7q-8Pt" secondAttribute="trailing" id="n5a-Dw-nDw"/>
-                <constraint firstItem="fEB-GY-fIm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="rfb-Bk-wLC"/>
-                <constraint firstAttribute="trailing" secondItem="fEB-GY-fIm" secondAttribute="trailing" id="wfM-4N-33G"/>
+                <constraint firstAttribute="bottom" secondItem="RuR-bq-FMz" secondAttribute="bottom" constant="5" id="GkX-cc-lhq"/>
+                <constraint firstAttribute="trailing" secondItem="RuR-bq-FMz" secondAttribute="trailing" constant="5" id="Vqb-lK-Ik2"/>
+                <constraint firstItem="RuR-bq-FMz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="bDV-w4-S83"/>
+                <constraint firstItem="RuR-bq-FMz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="yYK-JD-0My"/>
             </constraints>
             <size key="customSize" width="200" height="220"/>
             <connections>

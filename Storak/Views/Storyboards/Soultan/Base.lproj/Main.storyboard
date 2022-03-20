@@ -45,14 +45,14 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qCg-kJ-D2p">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="324" height="166"/>
+                                                                    <rect key="frame" x="5" y="5" width="314" height="156"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="qCg-kJ-D2p" secondAttribute="bottom" id="95c-F6-IGd"/>
-                                                                <constraint firstItem="qCg-kJ-D2p" firstAttribute="leading" secondItem="v3V-1d-XuX" secondAttribute="leading" id="9xc-vN-hJX"/>
-                                                                <constraint firstAttribute="trailing" secondItem="qCg-kJ-D2p" secondAttribute="trailing" id="erQ-39-piO"/>
-                                                                <constraint firstItem="qCg-kJ-D2p" firstAttribute="top" secondItem="v3V-1d-XuX" secondAttribute="top" id="kLG-an-VZ5"/>
+                                                                <constraint firstAttribute="bottom" secondItem="qCg-kJ-D2p" secondAttribute="bottom" constant="5" id="95c-F6-IGd"/>
+                                                                <constraint firstItem="qCg-kJ-D2p" firstAttribute="leading" secondItem="v3V-1d-XuX" secondAttribute="leading" constant="5" id="9xc-vN-hJX"/>
+                                                                <constraint firstAttribute="trailing" secondItem="qCg-kJ-D2p" secondAttribute="trailing" constant="5" id="erQ-39-piO"/>
+                                                                <constraint firstItem="qCg-kJ-D2p" firstAttribute="top" secondItem="v3V-1d-XuX" secondAttribute="top" constant="5" id="kLG-an-VZ5"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="324" height="166"/>
@@ -203,7 +203,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d53-HJ-Zli">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d53-HJ-Zli">
                                 <rect key="frame" x="0.0" y="88" width="414" height="609"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>

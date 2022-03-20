@@ -22,9 +22,6 @@
 		0A1108EE27DA72E60012715F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1108ED27DA72E60012715F /* Payment.storyboard */; };
 		0A1108F527DBB4BE0012715F /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1108F427DBB4BE0012715F /* URLs.swift */; };
 		0A11099A27DE80CA0012715F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A11099927DE80CA0012715F /* GoogleService-Info.plist */; };
-		0A11099D27DE8BB80012715F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A11099C27DE8BB80012715F /* FirebaseAnalytics */; };
-		0A11099F27DE8BB80012715F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0A11099E27DE8BB80012715F /* FirebaseAuth */; };
-		0A1109A127DE8BB80012715F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1109A027DE8BB80012715F /* FirebaseCrashlytics */; };
 		0AC9279B27E0C7E90077B1A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9279A27E0C7E90077B1A7 /* HomeViewController.swift */; };
 		0AC9279D27E0C8E60077B1A7 /* AdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9279C27E0C8E60077B1A7 /* AdsCollectionViewCell.swift */; };
 		0AC927A027E136260077B1A7 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9279E27E136260077B1A7 /* CategoriesCollectionViewCell.swift */; };
@@ -41,6 +38,7 @@
 		0AF0FF0727E3FC3300089AEF /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0FF0627E3FC3300089AEF /* Brand.swift */; };
 		0AF0FF0927E3FE5000089AEF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0FF0827E3FE5000089AEF /* Product.swift */; };
 		0AF0FF0B27E4076F00089AEF /* MainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0FF0A27E4076F00089AEF /* MainCategory.swift */; };
+		BB6588EEBED0ADCFDD19A210 /* Pods_Storak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30796FC792DE48C26409AB2 /* Pods_Storak.framework */; };
 		CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */; };
 		CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66527DBFCB400893A3B /* LogInViewController.swift */; };
 		CE19C66827DBFCD900893A3B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66727DBFCD900893A3B /* SignUpViewController.swift */; };
@@ -100,6 +98,9 @@
 		0AF0FF0627E3FC3300089AEF /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		0AF0FF0827E3FE5000089AEF /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0AF0FF0A27E4076F00089AEF /* MainCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategory.swift; sourceTree = "<group>"; };
+		7088BDA858E66529A771F17D /* Pods-Storak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak.release.xcconfig"; path = "Target Support Files/Pods-Storak/Pods-Storak.release.xcconfig"; sourceTree = "<group>"; };
+		B30796FC792DE48C26409AB2 /* Pods_Storak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB23C176486CE6F42CF59145 /* Pods-Storak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak.debug.xcconfig"; path = "Target Support Files/Pods-Storak/Pods-Storak.debug.xcconfig"; sourceTree = "<group>"; };
 		CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		CE19C66527DBFCB400893A3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE19C66727DBFCD900893A3B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -111,9 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1109A127DE8BB80012715F /* FirebaseCrashlytics in Frameworks */,
-				0A11099D27DE8BB80012715F /* FirebaseAnalytics in Frameworks */,
-				0A11099F27DE8BB80012715F /* FirebaseAuth in Frameworks */,
+				BB6588EEBED0ADCFDD19A210 /* Pods_Storak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +140,8 @@
 				0A11088827DA52980012715F /* StorakTests */,
 				0A11089227DA52980012715F /* StorakUITests */,
 				0A11086D27DA52950012715F /* Products */,
+				276E68A75C3F2B1DEB901D8E /* Pods */,
+				ACBB1BBF05191A75486D8E59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,16 +158,15 @@
 		0A11086E27DA52950012715F /* Storak */ = {
 			isa = PBXGroup;
 			children = (
+				0AF0FF0E27E664F400089AEF /* Resources */,
+				0AF0FF0C27E6649D00089AEF /* Core */,
 				0A1108A427DA52BB0012715F /* ViewModels */,
 				0A1108A327DA52B40012715F /* Models */,
 				0A1108F627DBB59E0012715F /* PONSOs */,
 				0A1108A227DA52AB0012715F /* Views */,
 				0A1108F327DBB48F0012715F /* Constants */,
-				0A11086F27DA52950012715F /* AppDelegate.swift */,
-				0A11087127DA52950012715F /* SceneDelegate.swift */,
-				0A11087B27DA52970012715F /* Assets.xcassets */,
-				0A11088027DA52970012715F /* Info.plist */,
 				0A11099927DE80CA0012715F /* GoogleService-Info.plist */,
+				0A11088027DA52970012715F /* Info.plist */,
 				0A11087827DA52950012715F /* Storak.xcdatamodeld */,
 			);
 			path = Storak;
@@ -299,6 +299,40 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		0AF0FF0C27E6649D00089AEF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0A11086F27DA52950012715F /* AppDelegate.swift */,
+				0A11087127DA52950012715F /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0AF0FF0E27E664F400089AEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A11087B27DA52970012715F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		276E68A75C3F2B1DEB901D8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB23C176486CE6F42CF59145 /* Pods-Storak.debug.xcconfig */,
+				7088BDA858E66529A771F17D /* Pods-Storak.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACBB1BBF05191A75486D8E59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B30796FC792DE48C26409AB2 /* Pods_Storak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,9 +340,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A11089927DA52980012715F /* Build configuration list for PBXNativeTarget "Storak" */;
 			buildPhases = (
+				D4469FB640301B701533C80A /* [CP] Check Pods Manifest.lock */,
 				0A11086827DA52950012715F /* Sources */,
 				0A11086927DA52950012715F /* Frameworks */,
 				0A11086A27DA52950012715F /* Resources */,
+				008EB4BAD94B6BB268C44C70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,9 +352,6 @@
 			);
 			name = Storak;
 			packageProductDependencies = (
-				0A11099C27DE8BB80012715F /* FirebaseAnalytics */,
-				0A11099E27DE8BB80012715F /* FirebaseAuth */,
-				0A1109A027DE8BB80012715F /* FirebaseCrashlytics */,
 			);
 			productName = Storak;
 			productReference = 0A11086C27DA52950012715F /* Storak.app */;
@@ -393,7 +426,6 @@
 			);
 			mainGroup = 0A11086327DA52950012715F;
 			packageReferences = (
-				0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0A11086D27DA52950012715F /* Products */;
 			projectDirPath = "";
@@ -440,6 +472,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		008EB4BAD94B6BB268C44C70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Storak/Pods-Storak-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Storak/Pods-Storak-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Storak/Pods-Storak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4469FB640301B701533C80A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Storak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A11086827DA52950012715F /* Sources */ = {
@@ -640,6 +714,7 @@
 		};
 		0A11089A27DA52980012715F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB23C176486CE6F42CF59145 /* Pods-Storak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -668,6 +743,7 @@
 		};
 		0A11089B27DA52980012715F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7088BDA858E66529A771F17D /* Pods-Storak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -806,35 +882,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0A11099C27DE8BB80012715F /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		0A11099E27DE8BB80012715F /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		0A1109A027DE8BB80012715F /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A11099B27DE8BB80012715F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0A11087827DA52950012715F /* Storak.xcdatamodeld */ = {

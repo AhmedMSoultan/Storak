@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BrandsCollectionViewCell: UICollectionViewCell {
 
@@ -18,8 +19,32 @@ class BrandsCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setUpCell(brandImage:String , brandName:String){
-        self.brandImage.image = UIImage(named: brandImage)
+    func setUpCell(brandImage:URL , brandName:String){
+//        self.brandImage.image = UIImage(named: brandImage)
         self.brandName.text = brandName
+        
+        
+        let url = brandImage
+        let processor = DownsamplingImageProcessor(size: self.brandImage.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 8)
+        self.brandImage.kf.indicatorType = .activity
+        self.brandImage.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "clothes-placeholder"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
 }

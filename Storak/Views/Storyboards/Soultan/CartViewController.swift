@@ -24,16 +24,16 @@ class CartViewController: UIViewController {
     
     var initTotal  = 0
     
-    let arrayOfItems = [item(itemName: "ArmChair", itemImage: "ArmChair", itemPrice: "100", itemCategory: "Furniture"),
-                        item(itemName: "Chair", itemImage: "Chair", itemPrice: "80", itemCategory: "Furniture"),
-                        item(itemName: "Lamp", itemImage: "Lamp", itemPrice: "130", itemCategory: "Furniture"),
-                        item(itemName: "NashvilleChair", itemImage: "NashvilleChair", itemPrice: "100", itemCategory: "Furniture"),
-                        item(itemName: "WingChair", itemImage: "WingChair", itemPrice: "180", itemCategory: "Furniture"),
-                        item(itemName: "ArmChair", itemImage: "ArmChair", itemPrice: "100", itemCategory: "Furniture"),
-                        item(itemName: "Chair", itemImage: "Chair", itemPrice: "80", itemCategory: "Furniture"),
-                        item(itemName: "Lamp", itemImage: "Lamp", itemPrice: "130", itemCategory: "Furniture"),
-                        item(itemName: "NashvilleChair", itemImage: "NashvilleChair", itemPrice: "100", itemCategory: "Furniture"),
-                        item(itemName: "WingChair", itemImage: "WingChair", itemPrice: "180", itemCategory: "Furniture")]
+    let arrayOfItems = [item(itemName: "baby-clothes", itemImage: "baby-clothes", itemPrice: "100", itemCategory: "Furniture"),
+                        item(itemName: "man", itemImage: "man", itemPrice: "80", itemCategory: "Furniture"),
+                        item(itemName: "onesie", itemImage: "onesie", itemPrice: "130", itemCategory: "Furniture"),
+                        item(itemName: "sneakers", itemImage: "sneakers", itemPrice: "100", itemCategory: "Furniture"),
+                        item(itemName: "tshirt", itemImage: "tshirt", itemPrice: "180", itemCategory: "Furniture"),
+                        item(itemName: "wardrobe", itemImage: "wardrobe", itemPrice: "100", itemCategory: "Furniture"),
+                        item(itemName: "sunglasses", itemImage: "sunglasses", itemPrice: "80", itemCategory: "Furniture"),
+                        item(itemName: "onesie", itemImage: "onesie", itemPrice: "130", itemCategory: "Furniture"),
+                        item(itemName: "sneakers", itemImage: "sneakers", itemPrice: "100", itemCategory: "Furniture"),
+                        item(itemName: "baby-clothes", itemImage: "baby-clothes", itemPrice: "180", itemCategory: "Furniture")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +101,7 @@ extension CartViewController: UITableViewDelegate , UITableViewDataSource{
         let cartItemCell = tableView.dequeueReusableCell(withIdentifier: "CartItemCell") as! CartTableViewCell
         let item = arrayOfItems[indexPath.row]
         cartItemCell.setUpCell(itemName: item.itemName, itemImage: item.itemImage, itemPrice: item.itemPrice)
+        cartItemCell.selectionStyle = .none
         return cartItemCell
     }
     

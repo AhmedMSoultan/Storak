@@ -1,0 +1,6 @@
+framework module FavoriteButton {
+  umbrella header "FavoriteButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

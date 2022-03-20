@@ -16,7 +16,7 @@ struct Product: Codable {
     let productVendor : String?
     let productType : String?
     let variants: [Variants]?
-    let images: [ProductImages]?
+    let images: [ProductImage]?
     
     
     enum CodingKeys: String, CodingKey {

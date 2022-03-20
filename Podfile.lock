@@ -1,0 +1,28 @@
+PODS:
+  - Cosmos (23.0.0)
+  - FavoriteButton (3.1.4)
+  - Kingfisher (7.1.2)
+  - ReachabilitySwift (5.0.0)
+
+DEPENDENCIES:
+  - Cosmos
+  - FavoriteButton
+  - Kingfisher
+  - ReachabilitySwift
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - FavoriteButton
+    - Kingfisher
+    - ReachabilitySwift
+
+SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  FavoriteButton: e43f0e8a0cf82c68223132496d5e0e847eac927d
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+
+PODFILE CHECKSUM: 0d169331f0465531a96453cc5c910db4ea475999
+
+COCOAPODS: 1.11.2
