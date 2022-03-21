@@ -38,12 +38,16 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         switch (indexPath.row) {
         case 0:
             cell.categoryNameLabel.text = "Men"
+            cell.categoryImageView.image = UIImage(named: "man")
         case 1:
             cell.categoryNameLabel.text = "Women"
+            cell.categoryImageView.image = UIImage(named: "dress")
         case 2:
             cell.categoryNameLabel.text = "Kids"
+            cell.categoryImageView.image = UIImage(named: "baby-clothes")
         default:
             cell.categoryNameLabel.text = "Sales"
+            cell.categoryImageView.image = UIImage(named: "coupon")
         }
         
         return cell

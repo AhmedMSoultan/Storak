@@ -79,6 +79,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rt6-pZ-IWT">
                                 <rect key="frame" x="0.0" y="139" width="414" height="32"/>
                                 <segments>
+                                    <segment title="All"/>
                                     <segment title="Clothes"/>
                                     <segment title="Shoes"/>
                                     <segment title="Accessories"/>
@@ -109,20 +110,64 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="heart" catalog="system" id="rQs-Ax-sgH">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="wishlistButtonAction:" destination="fVj-za-nqN" id="EB0-6P-aUU"/>
+                                    <segue destination="gvZ-mW-VoR" kind="show" identifier="wishlistSegue" id="RVK-0w-05y"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="cart" catalog="system" id="pvo-c2-t3N">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="cartButtonAction:" destination="fVj-za-nqN" id="Pg3-WE-oCF"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="productsCollectionView" destination="QYN-2S-rWo" id="Iwf-mv-MRC"/>
                         <outlet property="segmentedControl" destination="Rt6-pZ-IWT" id="OxV-Pw-heo"/>
+                        <segue destination="grj-JM-CCq" kind="show" identifier="cartSegue" id="Stv-so-L0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsd-lL-Utf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434.78260869565219" y="62.946428571428569"/>
+        </scene>
+        <!--CartViewController-->
+        <scene sceneID="He0-UN-HII">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="CartViewController" id="grj-JM-CCq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WeF-i2-Piz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhY-eB-keO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="-228"/>
+        </scene>
+        <!--Wishlist-->
+        <scene sceneID="VGP-Zb-xPi">
+            <objects>
+                <collectionViewController id="gvZ-mW-VoR" customClass="WishlistCollectionView" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eMX-mp-kzt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GRF-oY-Anf">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="gvZ-mW-VoR" id="Mty-U7-dLK"/>
+                            <outlet property="delegate" destination="gvZ-mW-VoR" id="Ti5-UT-sXM"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Wishlist" id="zvP-J4-Zd7"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-B2-jgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679" y="74"/>
         </scene>
         <!--Categories-->
         <scene sceneID="wlM-d0-eC2">
@@ -134,7 +179,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
