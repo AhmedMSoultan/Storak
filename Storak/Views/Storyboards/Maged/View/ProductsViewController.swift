@@ -19,6 +19,12 @@ class ProductsViewController: UIViewController {
         productsCollectionView.reloadData()
     }
     
+    @IBAction func cartButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "cartSegue", sender: self)
+    }
+    @IBAction func wishlistButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "wishlistSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +66,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
      func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        UIView.animate(withDuration: 0.5) {
+         UIView.animate(withDuration: 0.2) {
             if let cell = collectionView.cellForItem(at: indexPath) as? ItemCell {
                 cell.transform = .init(scaleX: 0.95, y: 0.95)
                 cell.contentView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha:1)
@@ -69,7 +75,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
 
      func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        UIView.animate(withDuration: 0.5) {
+         UIView.animate(withDuration: 0.5) {
             if let cell = collectionView.cellForItem(at: indexPath) as? ItemCell {
                 cell.transform = .identity
                 cell.contentView.backgroundColor = .clear

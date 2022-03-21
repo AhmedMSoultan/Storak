@@ -51,6 +51,7 @@
 		E8946C6E27DC1179007EFFC8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8946C6C27DC1179007EFFC8 /* CategoryCell.xib */; };
 		E8946C7127DC1334007EFFC8 /* UITableView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946C7027DC1334007EFFC8 /* UITableView+Extentions.swift */; };
 		E8946C7327DC136B007EFFC8 /* UICollectionView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946C7227DC136B007EFFC8 /* UICollectionView+Extentions.swift */; };
+		E8CF7B7827E8070D008E2ADC /* WishlistCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF7B7727E8070D008E2ADC /* WishlistCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		E8946C6C27DC1179007EFFC8 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		E8946C7027DC1334007EFFC8 /* UITableView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extentions.swift"; sourceTree = "<group>"; };
 		E8946C7227DC136B007EFFC8 /* UICollectionView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extentions.swift"; sourceTree = "<group>"; };
+		E8CF7B7727E8070D008E2ADC /* WishlistCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +358,7 @@
 				0A1108EB27DA71AD0012715F /* Categories.storyboard */,
 				E8946C5C27DBF6FE007EFFC8 /* CategoriesViewController.swift */,
 				E84447BA27E3BBF6002485CB /* ProductsViewController.swift */,
+				E8CF7B7727E8070D008E2ADC /* WishlistCollectionView.swift */,
 				E8946C6227DBF792007EFFC8 /* Cells */,
 			);
 			path = View;
@@ -579,6 +582,7 @@
 				CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */,
 				0AC9279B27E0C7E90077B1A7 /* HomeViewController.swift in Sources */,
 				CE19C66A27DC1D2100893A3B /* textFieldViewController.swift in Sources */,
+				E8CF7B7827E8070D008E2ADC /* WishlistCollectionView.swift in Sources */,
 				0AC927A527E15FDA0077B1A7 /* CategoriesHeaderReusableView.swift in Sources */,
 				0AF0FF0727E3FC3300089AEF /* Brand.swift in Sources */,
 				0AF0FF0527E3F7C200089AEF /* EndPoints.swift in Sources */,
