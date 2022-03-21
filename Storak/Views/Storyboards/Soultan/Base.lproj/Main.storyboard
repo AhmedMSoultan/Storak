@@ -285,11 +285,22 @@
                         <outlet property="cartItemsTableView" destination="d53-HJ-Zli" id="tmF-4V-yXs"/>
                         <outlet property="checkoutBtn" destination="bUF-0K-Dce" id="KyM-5L-O4b"/>
                         <outlet property="subtotalPriceLabel" destination="to7-Y1-6of" id="7yM-Uq-E47"/>
+                        <segue destination="4wb-AA-85l" kind="show" identifier="paymentSegue" id="3Fb-Y3-9aV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZ7-Hj-tCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2137.68115942029" y="-219.64285714285714"/>
+        </scene>
+        <!--PaymentCardViewController-->
+        <scene sceneID="ReW-Lb-g47">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payment" referencedIdentifier="PaymentCardViewController" id="4wb-AA-85l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yia-LF-4pD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsO-MP-Uuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663" y="-5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7cz-Ru-fZe">

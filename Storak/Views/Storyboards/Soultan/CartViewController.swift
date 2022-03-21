@@ -81,6 +81,8 @@ class CartViewController: UIViewController {
                 self.checkoutBtn.transform =
                    CGAffineTransform(scaleX: 1.0, y: 1.0)
             }, completion: nil)
+        
+        performSegue(withIdentifier: "paymentSegue", sender: self)
     }
     
     
