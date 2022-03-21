@@ -79,6 +79,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rt6-pZ-IWT">
                                 <rect key="frame" x="0.0" y="139" width="414" height="32"/>
                                 <segments>
+                                    <segment title="All"/>
                                     <segment title="Clothes"/>
                                     <segment title="Shoes"/>
                                     <segment title="Accessories"/>
