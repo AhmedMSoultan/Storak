@@ -36,6 +36,8 @@
 		CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */; };
 		CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66527DBFCB400893A3B /* LogInViewController.swift */; };
 		CE19C66827DBFCD900893A3B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19C66727DBFCD900893A3B /* SignUpViewController.swift */; };
+		CEACC22A27E7824B00FD35E5 /* SecondMyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC22927E7824B00FD35E5 /* SecondMyAccountViewController.swift */; };
+		CEACC22C27E8031200FD35E5 /* users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACC22B27E8031200FD35E5 /* users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		CE19C66527DBFCB400893A3B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CE19C66727DBFCD900893A3B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CEACC22927E7824B00FD35E5 /* SecondMyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMyAccountViewController.swift; sourceTree = "<group>"; };
+		CEACC22B27E8031200FD35E5 /* users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = users.swift; sourceTree = "<group>"; };
 		E0BB4AC2BD027BAC4B4F3BAF /* Pods-StorakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorakTests.debug.xcconfig"; path = "Target Support Files/Pods-StorakTests/Pods-StorakTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5ADD0C11722854723C68533 /* Pods-Storak-StorakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak-StorakUITests.debug.xcconfig"; path = "Target Support Files/Pods-Storak-StorakUITests/Pods-Storak-StorakUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F85CC1475780085B9E438BC7 /* Pods-Storak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storak.debug.xcconfig"; path = "Target Support Files/Pods-Storak/Pods-Storak.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,9 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				0A1108E727DA70D80012715F /* UserAccount.storyboard */,
+				CEACC22B27E8031200FD35E5 /* users.swift */,
 				CE19C66327DBFA8800893A3B /* MyAccountViewController.swift */,
 				CE19C66527DBFCB400893A3B /* LogInViewController.swift */,
 				CE19C66727DBFCD900893A3B /* SignUpViewController.swift */,
+				CEACC22927E7824B00FD35E5 /* SecondMyAccountViewController.swift */,
 			);
 			path = Shibl;
 			sourceTree = "<group>";
@@ -548,9 +554,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE19C66827DBFCD900893A3B /* SignUpViewController.swift in Sources */,
+				CEACC22C27E8031200FD35E5 /* users.swift in Sources */,
 				0A11087027DA52950012715F /* AppDelegate.swift in Sources */,
 				0A11087227DA52950012715F /* SceneDelegate.swift in Sources */,
 				CE19C66427DBFA8800893A3B /* MyAccountViewController.swift in Sources */,
+				CEACC22A27E7824B00FD35E5 /* SecondMyAccountViewController.swift in Sources */,
 				CE19C66627DBFCB400893A3B /* LogInViewController.swift in Sources */,
 				0A11087A27DA52950012715F /* Storak.xcdatamodeld in Sources */,
 				0A1108F527DBB4BE0012715F /* URLs.swift in Sources */,

@@ -12,6 +12,11 @@ import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     
+//    var ref: DatabaseReference!
+//
+//     ref = Database.database().reference()
+//
+    
     @IBOutlet weak var fnameTF: UITextField!
     @IBOutlet weak var lnameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -38,9 +43,9 @@ class SignUpViewController: UIViewController {
                 print("error is : \(String(describing: err?.localizedDescription))")
                 self.clearTF()
             }else{
-                // save f&l name in database
+                // save f&l name in database fire store
                 let db = Firestore.firestore()
-                db.collection("users").addDocument (data: ["firstname": firstName,"lastname":lastName, "uid": user!.user.uid ])
+                db.collection("users").document(user!.user.uid).setData(["firstname": firstName,"lastname":lastName, "uid": user!.user.uid])
                 if err != nil {
                        // Show error message
                         print("Error saving user data")
