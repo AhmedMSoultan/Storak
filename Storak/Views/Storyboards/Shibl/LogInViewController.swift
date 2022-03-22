@@ -32,14 +32,7 @@ class LogInViewController: UIViewController {
             self.user? = user
            // print(self.user?.uid)
             
-        }
-//        getName { (name) in
-//                    if let name = name {
-//                        self.emailTF.text = name
-//                        print("great success")
-//                    }
-//                }
-    }
+        }}
     
     override func viewWillDisappear(_ animated: Bool) {
         guard let handle = handle else { return }
@@ -66,72 +59,27 @@ class LogInViewController: UIViewController {
             else{
                 self.user = user?.user
                 print(self.user!.uid)
-                print("succed")
-              //  self.emailTF.text = ""
-                //self.passwordTF.text = ""
+                //print("succed")
+                self.emailTF.text = ""
+                self.passwordTF.text = ""
                 let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "accVC") as! SecondMyAccountViewController
                 secondVC.uid = self.user!.uid
                 self.navigationController?.pushViewController(secondVC, animated: true)
                 
                 }
           }
-//        let db = Firestore.firestore()
-//        // Read the documents at a specific path
-//        db.collection("users").getDocuments { snapshot, error in
-//           // Check for errors
-//            if (error != nil) nil {
-//                   // No errors
-//                  if let snapshot = snapshot {
-//                        // Get all the documents and create Todos
-//                          snapshot.documents.map { d in
-//                               return user(id: d.documentID,
-//                                                firstName: d["firstname"] as? String ?? "")
-//                                           }}
-           
     }
-        
-        
-    
-    
-
-        
-//    func getName(completion: @escaping (_ name: String?) -> Void) {
-//            guard let uid = Auth.auth().currentUser?.uid else { // safely unwrap the uid; avoid force unwrapping with !
-//                completion(nil) // user is not logged in; return nil
-//                return
-//            }
-//            Firestore.firestore().collection("users").document(uid).getDocument { (docSnapshot, error) in
-//                if let doc = docSnapshot {
-//                    if let name = doc.get("firstName") as? String {
-//                        print(name)
-//                        completion(name) // success; return name
-//                    } else {
-//                        print("error getting field")
-//                        completion(nil) // error getting field; return nil
-//                    }
-//                } else {
-//                    if let error = error {
-//                        print(error)
-//                    }
-//                    completion(nil) // error getting document; return nil
-//                }
-//            }
-//        }
-        
-    
-    
+       
     @IBAction func goTosignUp(_ sender: Any) {
-        let accVC = (storyboard?.instantiateViewController(withIdentifier: "accVC")) as! SecondMyAccountViewController
-        navigationController?.pushViewController(accVC, animated: true)
-//
-//        let signupVC = (storyboard?.instantiateViewController(withIdentifier: "signupVC")) as! SignUpViewController
-//        navigationController?.pushViewController(signupVC, animated: true)
-//    }
+        let signupVC = (storyboard?.instantiateViewController(withIdentifier: "signupVC")) as! SignUpViewController
+        navigationController?.pushViewController(signupVC, animated: true)
+    }
     
-    }}
-extension UITextField {
+    }
 
-    func useUnderline() {
+/// Extensions
+extension UITextField {
+ func useUnderline() {
         let border = CALayer()
         let borderWidth = CGFloat(1.0)
         border.borderColor = UIColor.black.cgColor
@@ -153,25 +101,3 @@ extension UIImageView {
        task.resume()
    }
 }
-
-
-//                    .document("data")
-//                usersRef.getDocument { (document,err) in
-//                    if let document = document, document.exists {
-//                        let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                        print("Document data: \(dataDescription)")
-//                    } else {
-//                        print("Document does not exist")
-//                    }
-
-
-
-//        Auth.auth().signIn(withEmail: email, password: password) {
-//            (user, err) in
-//           if err != nil {
-//               // Couldn't sign in
-//               print("error is : \(String(describing: err?.localizedDescription))")
-//           }else {
-//               print("sign in succses")
-//
-//           }
