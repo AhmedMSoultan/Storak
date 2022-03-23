@@ -41,6 +41,10 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mEs-r8-x04" id="2TG-hp-asA"/>
+                                            <outlet property="delegate" destination="mEs-r8-x04" id="w20-xO-DuY"/>
+                                        </connections>
                                     </tableView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-Ke-KiW">
                                         <rect key="frame" x="0.0" y="259" width="414" height="239"/>
@@ -55,6 +59,10 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mEs-r8-x04" id="Jbl-M3-ash"/>
+                                            <outlet property="delegate" destination="mEs-r8-x04" id="AIi-c0-WZp"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -98,6 +106,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstNameLabel" destination="MIc-uB-FyK" id="lJI-2A-n14"/>
+                        <outlet property="orderTableView" destination="Tdh-Ke-KiW" id="eZV-HS-Gun"/>
+                        <outlet property="wishListTableView" destination="nmC-IE-oVG" id="aWT-BL-8zE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7m-Qq-O1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

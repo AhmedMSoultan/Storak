@@ -10,26 +10,20 @@ import Firebase
 import FirebaseFirestore
 import FirebaseCore
 
-class SecondMyAccountViewController: UIViewController {
-  
-    
-
+class SecondMyAccountViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+   
+     
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var wishListTableView: UITableView!
+    @IBOutlet weak var orderTableView: UITableView!
     var uid : String?
     
-   
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    @IBOutlet weak var firstNameLabel: UILabel!
-//
-//    let id = Auth.auth().currentUser!.uid
-//    let email = Auth.auth().currentUser!.email
-    
     // MARK: Lifecycle
-    
-   override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // call super
         
         getName(uid: uid) { name in
@@ -37,14 +31,24 @@ class SecondMyAccountViewController: UIViewController {
             print(name!)
         }
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
     
     @IBAction func signOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()
             print("you sign out succesfuly")
+//            let MyAccountViewControler = MyAccountViewController()
+//            let myaccoutcontroler = UINavigationController(rootViewController: MyAccountViewControler)
+//            self.present(MyAccountViewController, animated: true, completion: nil)
             let myaccount = self.storyboard?.instantiateViewController(withIdentifier: "myaccount") as! MyAccountViewController
             self.navigationController?.pushViewController(myaccount, animated: true)
+            
         }catch let err{
             print(err)
         }
@@ -63,7 +67,7 @@ class SecondMyAccountViewController: UIViewController {
                 completion("in our shop")
             }
 
+            }
         }
-    }
     }
 
