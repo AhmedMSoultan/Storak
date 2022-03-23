@@ -15,7 +15,6 @@ class CategoryCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         addShadowToCategoryImageView()
-        configure()
     }
 
     func addShadowToCategoryImageView() {
@@ -28,15 +27,11 @@ class CategoryCell: UITableViewCell {
         imageContainer.layer.cornerRadius = 5
     }
   
-    
+    func setupCell(categoryName : String , categoryImage : String) {
+        
+        categoryNameLabel.text = categoryName
+        categoryImageView.image = UIImage(named: categoryImage
+        )
+    }
 }
 
-extension CategoryCell {
-    
-    func configure() {
-        
-        categoryImageView.image = UIImage(named: "Path544")
-        
-    }
-    
-}

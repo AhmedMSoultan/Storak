@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import Kingfisher
+import FavoriteButton
 
 class ItemCell: UICollectionViewCell {
+    
     @IBOutlet weak var productImage: UIImageView!
-    
     @IBOutlet weak var productNameLabel: UILabel!
-    
     @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var wishlistBtn: FavoriteButton!
+    
+    var cellProduct : Product?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -37,13 +42,59 @@ class ItemCell: UICollectionViewCell {
             }
         }
     
-}
-extension ItemCell {
     
-    func configure() {
+    
+    @IBAction func wishlistBtnAction(_ sender: Any) {
+        var deletedIndex = 0
+        if (wishlistBtn.isSelected){
+            print("is selected")
+            NotificationCenter.default.post(name: Notification.Name("addToWishlist"), object: cellProduct)
+            localDataLayer.arrayOfWishedProducts.append(cellProduct!)
+            localDataLayer.saveWishedProducts()
+        }else{
+            print("not selected")
+            NotificationCenter.default.post(name: Notification.Name("removeFromWishlist"), object: cellProduct)
+            localDataLayer.loadWishedProducts()
+            
+            if localDataLayer.arrayOfWishedProducts.contains(where: { wishedProduct in
+                deletedIndex = localDataLayer.arrayOfWishedProducts.firstIndex(of: wishedProduct)!
+                return wishedProduct.productId == cellProduct?.productId
+            }) {
+                localDataLayer.arrayOfWishedProducts.remove(at: deletedIndex)
+                localDataLayer.saveWishedProducts()
+            }
+        }
+    }
+    
+    
+    func setupCell(productImage:URL , productName:String , productPrice:String){
+        self.productNameLabel.text = productName
+        self.productPriceLabel.text = productPrice + " LE"
         
-        productImage.image = UIImage(named: "Path544")
+        let url = productImage
+        let processor = DownsamplingImageProcessor(size: self.productImage.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 8)
+        self.productImage.kf.indicatorType = .activity
         
+        self.productImage.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "clothes-placeholder"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
     
 }
+

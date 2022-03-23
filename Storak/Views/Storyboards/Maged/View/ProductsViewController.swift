@@ -10,61 +10,190 @@ import UIKit
 class ProductsViewController: UIViewController {
     
     var selectedSegment: Int!
+    var collectionID : String?
+    var productType : String?
+    var arrayOfProducts : [Product]?
+    var selectedProduct : Product?
+    var isWished = false
+    
+    var arrayOfWishedProducts = localDataLayer.arrayOfWishedProducts
+    
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var productsCollectionView: UICollectionView!
   
     @IBAction func switchSelectedSegment(_ sender: UISegmentedControl) {
+        
         selectedSegment = sender.selectedSegmentIndex
-        productsCollectionView.reloadData()
+        updateData()
+        
+        if(selectedSegment == 0){
+            if(collectionID == "272068509743"){
+                NetworkLayer.requestAllProducts { products , error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }else{
+                NetworkLayer.requestBrandProducts(brandID: collectionID ?? "") { products , error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }
+        }else if (selectedSegment == 1){
+            productType = "T-SHIRTS"
+            if(collectionID == "272068509743"){
+                NetworkLayer.requestAllProductsByProductType(productType: productType ?? "T-SHIRTS") { products , error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }else{
+                NetworkLayer.requestCategoryProducts(collectionID: collectionID ?? "272069034031", productType: productType ?? "T-SHIRTS") { products, error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }
+        }
+        else if (selectedSegment == 2){
+            productType = "SHOES"
+            if(collectionID == "272068509743"){
+                NetworkLayer.requestAllProductsByProductType(productType: productType ?? "SHOES") { products , error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }else{
+                NetworkLayer.requestCategoryProducts(collectionID: collectionID ?? "272069034031", productType: productType ?? "SHOES") { products, error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }
+        }
+        else if (selectedSegment == 3){
+            productType = "ACCESSORIES"
+            if(collectionID == "272068509743"){
+                NetworkLayer.requestAllProductsByProductType(productType: productType ?? "ACCESSORIES") { products , error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }else{
+                NetworkLayer.requestCategoryProducts(collectionID: collectionID ?? "272069034031", productType: productType ?? "ACCESSORIES") { products, error in
+                    self.arrayOfProducts = products
+                    DispatchQueue.main.async {
+                        self.productsCollectionView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func cartButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "cartSegue", sender: self)
+        performSegue(withIdentifier: "CartSegue", sender: self)
     }
     @IBAction func wishlistButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "wishlistSegue", sender: self)
+        performSegue(withIdentifier: "WishListSegue", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(collectionID == "272068509743"){
+            NetworkLayer.requestAllProducts { products, error in
+                self.arrayOfProducts = products
+                DispatchQueue.main.async {
+                    self.productsCollectionView.reloadData()
+                }
+            }
+        }else{
+            NetworkLayer.requestBrandProducts(brandID: collectionID ?? "272069034031") { products, error in
+                self.arrayOfProducts = products
+                DispatchQueue.main.async {
+                    self.productsCollectionView.reloadData()
+                }
+            }
+        }
         
         selectedSegment = 0
-        productsCollectionView.register(cellType: ItemCell.self)
+        productsCollectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: "itemCell")
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateData()
+    }
+    
+    func updateData(){
+        localDataLayer.loadWishedProducts()
+        arrayOfWishedProducts = localDataLayer.arrayOfWishedProducts
+    }
+    
+    
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return arrayOfProducts?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withType: ItemCell.self, for: indexPath)
         
-        switch selectedSegment {
-        case 0:
-            cell.productImage.image = UIImage(named: "Chair1")
-        case 1:
-            cell.productImage.image = UIImage(named: "Chair2")
-        case 2:
-            cell.productImage.image = UIImage(named: "Chair3")
-        default:
-            cell.productImage.image = UIImage(named: "Chair4")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! ItemCell
+        let product = arrayOfProducts![indexPath.row]
+        cell.cellProduct = product
+        
+        if arrayOfWishedProducts.contains(where: { wishedProduct in
+            wishedProduct.productId == product.productId
+        }) {
+            cell.wishlistBtn.isSelected = true
+        }else{
+            cell.wishlistBtn.isSelected = false
         }
         
+        cell.setupCell(productImage: product.images![0].src!, productName: product.productName ?? "", productPrice: product.variants![0].price ?? "")
         return cell
+        
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         return CGSize(width: collectionView.frame.size.width/2.2, height: collectionView.frame.size.height/3.1)
     }
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedProduct = arrayOfProducts![indexPath.row]
+        if arrayOfWishedProducts.contains(where: { wishedProduct in
+            wishedProduct.productId == selectedProduct!.productId
+        }) {
+            isWished = true
+        }else{
+            isWished = false
+        }
+        performSegue(withIdentifier: "ProductDetailsSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ProductDetailsSegue"){
+            let productDetailsVC = segue.destination as! ProductDetailsViewController
+            productDetailsVC.product = self.selectedProduct
+            productDetailsVC.isWished = self.isWished
+        }
     }
     
      func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {

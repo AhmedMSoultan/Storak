@@ -11,9 +11,27 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var categoriesTableView: UITableView!
     
+    var selectedCategory : String?
+    var arrayOfMainCategories = [MainCategory]()
+    var arrayOfCategoriesImages = [UIImage(named: "Home page"),
+                                   UIImage(named: "KID"),
+                                   UIImage(named: "MEN"),
+                                   UIImage(named: "SALE"),
+                                   UIImage(named: "WOMEN")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        
+        NetworkLayer.requestMainCategories { mainCategories, error in
+            self.arrayOfMainCategories = mainCategories
+            DispatchQueue.main.async {
+                self.categoriesTableView.reloadData()
+            }
+        }
+        
+        let wishlistVC = self.storyboard?.instantiateViewController(withIdentifier: "WishListViewController") as! WishListViewController
+        NotificationCenter.default.addObserver(wishlistVC, selector: #selector(wishlistVC.addItemToWishlist), name: Notification.Name("addToWishlist"), object: nil)
     }
     
    private func configureTableView() {
@@ -22,12 +40,19 @@ class CategoriesViewController: UIViewController {
         categoriesTableView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "CategoryProductsSegue"){
+            let categoryProductsVC = segue.destination as! ProductsViewController
+            categoryProductsVC.collectionID = selectedCategory ?? ""
+        }
+    }
+    
 }
 
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return arrayOfMainCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,27 +60,16 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withType: CategoryCell.self, for: indexPath)
         cell.selectionStyle = .none
         
-        switch (indexPath.row) {
-        case 0:
-            cell.categoryNameLabel.text = "Men"
-            cell.categoryImageView.image = UIImage(named: "man")
-        case 1:
-            cell.categoryNameLabel.text = "Women"
-            cell.categoryImageView.image = UIImage(named: "dress")
-        case 2:
-            cell.categoryNameLabel.text = "Kids"
-            cell.categoryImageView.image = UIImage(named: "baby-clothes")
-        default:
-            cell.categoryNameLabel.text = "Sales"
-            cell.categoryImageView.image = UIImage(named: "coupon")
-        }
+        let category = arrayOfMainCategories[indexPath.row]
+        cell.setupCell(categoryName: category.categoryName ?? "", categoryImage: category.categoryName ?? "")
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "segue", sender: self)
+        let categoryID = "\(arrayOfMainCategories[indexPath.row].categoryId)"
+        selectedCategory = categoryID
+        performSegue(withIdentifier: "CategoryProductsSegue", sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

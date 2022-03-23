@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nMH-TH-hQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nMH-TH-hQd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,7 +43,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoriesTableView" destination="XHb-3d-FVh" id="fhn-4l-ncl"/>
-                        <segue destination="fVj-za-nqN" kind="show" identifier="segue" id="IA5-vi-VD8"/>
+                        <segue destination="fVj-za-nqN" kind="show" identifier="CategoryProductsSegue" id="IA5-vi-VD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0S-y7-Jzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -52,7 +53,7 @@
         <!--Products-->
         <scene sceneID="1r4-bf-Cdl">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fVj-za-nqN" customClass="ProductsViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductsViewController" automaticallyAdjustsScrollViewInsets="NO" id="fVj-za-nqN" customClass="ProductsViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pyj-yV-gCP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +113,6 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="wishlistButtonAction:" destination="fVj-za-nqN" id="EB0-6P-aUU"/>
-                                    <segue destination="gvZ-mW-VoR" kind="show" identifier="wishlistSegue" id="RVK-0w-05y"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="cart" catalog="system" id="pvo-c2-t3N">
@@ -126,12 +126,24 @@
                     <connections>
                         <outlet property="productsCollectionView" destination="QYN-2S-rWo" id="Iwf-mv-MRC"/>
                         <outlet property="segmentedControl" destination="Rt6-pZ-IWT" id="OxV-Pw-heo"/>
-                        <segue destination="grj-JM-CCq" kind="show" identifier="cartSegue" id="Stv-so-L0U"/>
+                        <segue destination="grj-JM-CCq" kind="show" identifier="CartSegue" id="Stv-so-L0U"/>
+                        <segue destination="7q1-Fe-cXv" kind="show" identifier="ProductDetailsSegue" id="2u7-5p-2dw"/>
+                        <segue destination="DGr-96-s7N" kind="show" identifier="WishListSegue" id="Wko-ox-BDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsd-lL-Utf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434.78260869565219" y="62.946428571428569"/>
+        </scene>
+        <!--ProductDetailsViewController-->
+        <scene sceneID="q0U-xk-U6f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payment" referencedIdentifier="ProductDetailsViewController" id="7q1-Fe-cXv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Hhc-Ti-0G1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OF2-sM-3OI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="321"/>
         </scene>
         <!--CartViewController-->
         <scene sceneID="He0-UN-HII">
@@ -143,31 +155,63 @@
             </objects>
             <point key="canvasLocation" x="1163" y="-228"/>
         </scene>
-        <!--Wishlist-->
-        <scene sceneID="VGP-Zb-xPi">
+        <!--Wish List-->
+        <scene sceneID="afy-YO-Ur9">
             <objects>
-                <collectionViewController id="gvZ-mW-VoR" customClass="WishlistCollectionView" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eMX-mp-kzt">
+                <viewController storyboardIdentifier="WishListViewController" id="DGr-96-s7N" customClass="WishListViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fva-M7-Tb3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bjh-MH-21H">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="efV-Mc-LsA">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="V70-jj-X0N">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rYz-3d-UcJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6BA-51-KGS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GRF-oY-Anf">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="gvZ-mW-VoR" id="Mty-U7-dLK"/>
-                            <outlet property="delegate" destination="gvZ-mW-VoR" id="Ti5-UT-sXM"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Wishlist" id="zvP-J4-Zd7"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-B2-jgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="6BA-51-KGS" firstAttribute="bottom" secondItem="bjh-MH-21H" secondAttribute="bottom" id="9kC-iY-uws"/>
+                            <constraint firstItem="6BA-51-KGS" firstAttribute="trailing" secondItem="bjh-MH-21H" secondAttribute="trailing" id="afy-8v-DdA"/>
+                            <constraint firstItem="bjh-MH-21H" firstAttribute="leading" secondItem="6BA-51-KGS" secondAttribute="leading" id="cgD-pX-BdW"/>
+                            <constraint firstItem="bjh-MH-21H" firstAttribute="top" secondItem="6BA-51-KGS" secondAttribute="top" id="jGQ-Jc-b1r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wish List" id="WQt-OT-JMD"/>
+                    <connections>
+                        <outlet property="wishlistCollectionView" destination="bjh-MH-21H" id="THt-rI-61W"/>
+                        <segue destination="3wF-Ob-cAg" kind="show" identifier="ProductDetailsSegue" id="Nk3-Hs-bnp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKh-R6-Eft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="74"/>
+            <point key="canvasLocation" x="1735" y="63"/>
+        </scene>
+        <!--ProductDetailsViewController-->
+        <scene sceneID="jJQ-7L-R6b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payment" referencedIdentifier="ProductDetailsViewController" id="3wF-Ob-cAg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tao-mx-YHz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byC-dm-avC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360" y="-205"/>
         </scene>
         <!--Categories-->
         <scene sceneID="wlM-d0-eC2">
