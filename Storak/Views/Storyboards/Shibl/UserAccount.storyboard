@@ -25,29 +25,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lka-cI-dhR">
                                 <rect key="frame" x="0.0" y="315" width="414" height="498"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-IE-oVG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="239" id="W3Z-2d-IRA"/>
-                                        </constraints>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="E19-gc-YI6">
-                                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E19-gc-YI6" id="XZ6-e3-9Xt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="mEs-r8-x04" id="2TG-hp-asA"/>
-                                            <outlet property="delegate" destination="mEs-r8-x04" id="w20-xO-DuY"/>
-                                        </connections>
-                                    </tableView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-Ke-KiW">
-                                        <rect key="frame" x="0.0" y="259" width="414" height="239"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="498"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MIf-Fa-aWt">
@@ -59,10 +38,6 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="mEs-r8-x04" id="Jbl-M3-ash"/>
-                                            <outlet property="delegate" destination="mEs-r8-x04" id="AIi-c0-WZp"/>
-                                        </connections>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -106,8 +81,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstNameLabel" destination="MIc-uB-FyK" id="lJI-2A-n14"/>
-                        <outlet property="orderTableView" destination="Tdh-Ke-KiW" id="eZV-HS-Gun"/>
-                        <outlet property="wishListTableView" destination="nmC-IE-oVG" id="aWT-BL-8zE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7m-Qq-O1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,7 +228,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PassWord" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-eB-8h8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-eB-8h8">
                                         <rect key="frame" x="0.0" y="81" width="394" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -264,12 +237,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmE-3E-LfE">
                                         <rect key="frame" x="0.0" y="121.5" width="394" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMM-Vk-8N2">
-                                <rect key="frame" x="53" y="539" width="308" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMM-Vk-8N2">
+                                <rect key="frame" x="20" y="539" width="374" height="55"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign In">
@@ -287,7 +260,7 @@
                             <constraint firstItem="vEH-rG-uBX" firstAttribute="top" secondItem="dEc-Xr-951" secondAttribute="top" id="Bui-LO-J9I"/>
                             <constraint firstItem="g4P-Zt-b3g" firstAttribute="top" secondItem="3Qf-OT-Afi" secondAttribute="bottom" constant="13" id="JTN-dW-rCw"/>
                             <constraint firstItem="woi-7e-V7C" firstAttribute="trailing" secondItem="Wej-Ml-ty2" secondAttribute="trailing" constant="10" id="Kwa-j0-v2g"/>
-                            <constraint firstItem="ops-pb-19g" firstAttribute="top" secondItem="WMM-Vk-8N2" secondAttribute="bottom" constant="49" id="NEF-2C-iHM"/>
+                            <constraint firstItem="ops-pb-19g" firstAttribute="top" secondItem="WMM-Vk-8N2" secondAttribute="bottom" constant="25" id="NEF-2C-iHM"/>
                             <constraint firstItem="g4P-Zt-b3g" firstAttribute="leading" secondItem="woi-7e-V7C" secondAttribute="leading" constant="20" id="S4M-D2-qOS"/>
                             <constraint firstItem="WMM-Vk-8N2" firstAttribute="top" secondItem="Wej-Ml-ty2" secondAttribute="bottom" constant="50" id="T04-Iy-Kqk"/>
                             <constraint firstItem="Wej-Ml-ty2" firstAttribute="centerY" secondItem="dEc-Xr-951" secondAttribute="centerY" constant="-30" id="W4g-Ph-3Tl"/>
@@ -296,7 +269,7 @@
                             <constraint firstItem="vEH-rG-uBX" firstAttribute="leading" secondItem="woi-7e-V7C" secondAttribute="leading" id="bTC-96-J8B"/>
                             <constraint firstItem="WMM-Vk-8N2" firstAttribute="centerX" secondItem="Wej-Ml-ty2" secondAttribute="centerX" id="jP0-UW-Lhk"/>
                             <constraint firstItem="3Qf-OT-Afi" firstAttribute="top" secondItem="woi-7e-V7C" secondAttribute="top" constant="40" id="mKL-uk-9Kv"/>
-                            <constraint firstItem="WMM-Vk-8N2" firstAttribute="leading" secondItem="woi-7e-V7C" secondAttribute="leading" constant="53" id="mQ6-pg-gta"/>
+                            <constraint firstItem="WMM-Vk-8N2" firstAttribute="leading" secondItem="woi-7e-V7C" secondAttribute="leading" constant="20" id="mQ6-pg-gta"/>
                             <constraint firstItem="vEH-rG-uBX" firstAttribute="trailing" secondItem="woi-7e-V7C" secondAttribute="trailing" id="mY4-uH-KUi"/>
                             <constraint firstItem="3Qf-OT-Afi" firstAttribute="leading" secondItem="woi-7e-V7C" secondAttribute="leading" constant="61" id="nCy-JM-CvV"/>
                         </constraints>

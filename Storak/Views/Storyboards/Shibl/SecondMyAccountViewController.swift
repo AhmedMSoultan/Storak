@@ -10,12 +10,12 @@ import Firebase
 import FirebaseFirestore
 import FirebaseCore
 
-class SecondMyAccountViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class SecondMyAccountViewController: UIViewController{
    
      
-    @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var wishListTableView: UITableView!
-    @IBOutlet weak var orderTableView: UITableView!
+   @IBOutlet weak var firstNameLabel: UILabel!
+//    @IBOutlet weak var wishListTableView: UITableView!
+//    @IBOutlet weak var orderTableView: UITableView!
     var uid : String?
     
      override func viewDidLoad() {
@@ -31,14 +31,16 @@ class SecondMyAccountViewController: UIViewController,UITableViewDelegate,UITabl
             print(name!)
         }
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//     return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "wishlistCell", for: indexPath)
+//        cell.textLabel?.text = ""
+//        return cell
+//    }
+//
     @IBAction func signOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()
