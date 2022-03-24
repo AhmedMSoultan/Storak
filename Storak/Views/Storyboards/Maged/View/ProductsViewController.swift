@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AllProductsProtocol {
+    func requestAllProducts(completionHandler: @escaping ([Product] , Error?) -> Void)
+}
+
 class ProductsViewController: UIViewController {
     
     var selectedSegment: Int!
@@ -18,6 +22,8 @@ class ProductsViewController: UIViewController {
     
     var arrayOfWishedProducts = localDataLayer.arrayOfWishedProducts
     
+    var service: AllProductsProtocol = NetworkLayer()
+    
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var productsCollectionView: UICollectionView!
@@ -26,10 +32,39 @@ class ProductsViewController: UIViewController {
         
         selectedSegment = sender.selectedSegmentIndex
         updateData()
+        self.detectingCurrentSegmant()
+    }
+    
+    @IBAction func cartButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "CartSegue", sender: self)
+    }
+    @IBAction func wishlistButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "WishListSegue", sender: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        selectedSegment = 0
+        productsCollectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: "itemCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.detectingCurrentSegmant()
+        updateData()
+    }
+    
+    func updateData(){
+        localDataLayer.loadWishedProducts()
+        arrayOfWishedProducts = localDataLayer.arrayOfWishedProducts
+    }
+    
+    func detectingCurrentSegmant(){
         if(selectedSegment == 0){
             if(collectionID == "272068509743"){
-                NetworkLayer.requestAllProducts { products , error in
+                service.requestAllProducts { products , error in
                     self.arrayOfProducts = products
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
@@ -98,47 +133,6 @@ class ProductsViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func cartButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "CartSegue", sender: self)
-    }
-    @IBAction func wishlistButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "WishListSegue", sender: self)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if(collectionID == "272068509743"){
-            NetworkLayer.requestAllProducts { products, error in
-                self.arrayOfProducts = products
-                DispatchQueue.main.async {
-                    self.productsCollectionView.reloadData()
-                }
-            }
-        }else{
-            NetworkLayer.requestBrandProducts(brandID: collectionID ?? "272069034031") { products, error in
-                self.arrayOfProducts = products
-                DispatchQueue.main.async {
-                    self.productsCollectionView.reloadData()
-                }
-            }
-        }
-        
-        selectedSegment = 0
-        productsCollectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: "itemCell")
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updateData()
-    }
-    
-    func updateData(){
-        localDataLayer.loadWishedProducts()
-        arrayOfWishedProducts = localDataLayer.arrayOfWishedProducts
-    }
-    
-    
 }
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

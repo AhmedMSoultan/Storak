@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol BrandsAndCategoryProtocol {
+    func requestBrands(completionHandler: @escaping ([Brand], Error?) -> Void)
+    func requestMainCategories(completionHandler: @escaping ([MainCategory] , Error?) -> Void)
+}
+
 class HomeViewController: UIViewController {
     
     var timer : Timer?
@@ -28,6 +33,8 @@ class HomeViewController: UIViewController {
                                    UIImage(named: "SALE"),
                                    UIImage(named: "WOMEN")]
     
+    var service: BrandsAndCategoryProtocol = NetworkLayer()
+    
     
     @IBOutlet weak var adsCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -47,14 +54,14 @@ class HomeViewController: UIViewController {
         categoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "categoryCell")
         brandsCollectionView.register(UINib(nibName: "BrandsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "brandsCell")
         
-        NetworkLayer.requestMainCategories { mainCategories, error in
+        service.requestMainCategories { mainCategories, error in
             self.arrayOfMainCategories = mainCategories
             DispatchQueue.main.async {
                 self.categoriesCollectionView.reloadData()
             }
         }
         
-        NetworkLayer.requestBrands { brands, error in
+        service.requestBrands { brands, error in
             self.arrayOfBrands = brands
             DispatchQueue.main.async {
                 self.brandsCollectionView.reloadData()

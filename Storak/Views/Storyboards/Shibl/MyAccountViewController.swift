@@ -7,22 +7,31 @@
 
 import UIKit
 
-class MyAccountViewController: UIViewController {
+class MyAccountViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
 
+    @IBOutlet weak var wishListTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "wishlistCell", for: indexPath)
+        cell.textLabel?.text = ""
+        return cell
+    }
 
     @IBAction func ToSignInVC(_ sender: Any) {
-        let signinVC = (storyboard?.instantiateViewController(withIdentifier: "signinVC")) as! LogInViewController
+        let signinVC = (storyboard?.instantiateViewController(withIdentifier: "LogInViewController")) as! LogInViewController
         navigationController?.pushViewController(signinVC, animated: true)
     }
     
     @IBAction func ToSignUpVC(_ sender: Any) {
-        let signupVC = (storyboard?.instantiateViewController(withIdentifier: "signupVC")) as! SignUpViewController
+        let signupVC = (storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")) as! SignUpViewController
         navigationController?.pushViewController(signupVC, animated: true)
         
     }

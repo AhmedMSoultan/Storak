@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+
 
 class SignUpViewController: UIViewController {
-
+    
+    
     @IBOutlet weak var fnameTF: UITextField!
     @IBOutlet weak var lnameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -16,18 +20,59 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleTF()
+    }
+   
+
+    @IBAction func signUp(_ sender: Any) {
+        
+        let firstName = fnameTF.text!.trimmingCharacters (in:.whitespacesAndNewlines)
+        let lastName = lnameTF.text!.trimmingCharacters(in:.whitespacesAndNewlines)
+        let email = emailTF.text!.trimmingCharacters(in:.whitespacesAndNewlines)
+        let password = passwordTF.text!.trimmingCharacters(in:.whitespacesAndNewlines)
+        
+        /// create yser in firebase
+        Auth.auth().createUser(withEmail: email, password: password) { user, err in
+            if err != nil {
+                print("error is : \(String(describing: err?.localizedDescription))")
+                self.clearTF()
+            }else{
+                // save f&l name in database fire store
+                let db = Firestore.firestore()
+                db.collection("users").document(user!.user.uid).setData(["firstname": firstName,"lastname":lastName, "uid": user!.user.uid])
+                if err != nil {
+                       // Show error message
+                        print("Error saving user data")
+                }else{
+                print("Creation is done")
+                    
+                // alert for succses of registeration
+                let alert = UIAlertController(title: " Hi \(firstName) ", message: "You Are Registered Successfully", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                self.clearTF()
+                }
+            }
+        }
+    }
+        
+    
+    
+    @IBAction func returnToSignIn(_ sender: Any) {
+        let signinVC = (storyboard?.instantiateViewController(withIdentifier: "LogInViewController")) as! LogInViewController
+        navigationController?.pushViewController(signinVC, animated: true)
+    }
+    // to clear text feilds
+    func clearTF(){
+        self.emailTF.text = ""
+        self.passwordTF.text = ""
+        self.lnameTF.text = ""
+        self.fnameTF.text = ""
+    }
+    func styleTF(){
         fnameTF.useUnderline()
         lnameTF.useUnderline()
         emailTF.useUnderline()
         passwordTF.useUnderline()
-    }
-    
-
-    @IBAction func signUp(_ sender: Any) {
-        
-    }
-    
-    @IBAction func returnToSignIn(_ sender: Any) {
-        
-    }
+}
 }

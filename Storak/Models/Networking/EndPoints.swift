@@ -48,8 +48,8 @@ enum EndPoint {
 }
 
 
-class NetworkLayer {
-    class func requestBrands(completionHandler: @escaping ([Brand], Error?) -> Void ) {
+class NetworkLayer: BrandsAndCategoryProtocol, AllProductsProtocol {
+    func requestBrands(completionHandler: @escaping ([Brand], Error?) -> Void ) {
         let _ = URLSession.shared.dataTask(with: EndPoint.brandsEndPoint.url) { data, response, error in
             guard let data = data else {
                 completionHandler([], error)
@@ -67,7 +67,7 @@ class NetworkLayer {
     
     
     
-    class func requestAllProducts(completionHandler: @escaping ([Product] , Error?) -> Void){
+    func requestAllProducts(completionHandler: @escaping ([Product] , Error?) -> Void){
         let _ = URLSession.shared.dataTask(with: EndPoint.allProductsEndPoint.url) { data, response, error in
             guard let data = data else {
                 completionHandler([], error)
@@ -147,7 +147,7 @@ class NetworkLayer {
         }.resume()
     }
     
-    class func requestMainCategories(completionHandler: @escaping ([MainCategory] , Error?) -> Void){
+    func requestMainCategories(completionHandler: @escaping ([MainCategory] , Error?) -> Void){
         let _ = URLSession.shared.dataTask(with: EndPoint.mainCategoriesEndPoint.url) { data, response, error in
             guard let data = data else {
                 completionHandler([], error)

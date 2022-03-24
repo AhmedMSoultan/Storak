@@ -51,7 +51,6 @@ class ProductDetailsViewController: UIViewController {
     }
     
     
-    
     @IBAction func cartBtnAction(_ sender: Any) {
         performSegue(withIdentifier: "cartScreen", sender: self)
     }

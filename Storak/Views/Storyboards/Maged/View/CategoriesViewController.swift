@@ -19,11 +19,13 @@ class CategoriesViewController: UIViewController {
                                    UIImage(named: "SALE"),
                                    UIImage(named: "WOMEN")]
     
+    var service: BrandsAndCategoryProtocol = NetworkLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         
-        NetworkLayer.requestMainCategories { mainCategories, error in
+        service.requestMainCategories { mainCategories, error in
             self.arrayOfMainCategories = mainCategories
             DispatchQueue.main.async {
                 self.categoriesTableView.reloadData()

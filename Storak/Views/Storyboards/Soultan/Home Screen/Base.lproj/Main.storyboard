@@ -23,7 +23,7 @@
         <!--Home-->
         <scene sceneID="1SX-y8-KgY">
             <objects>
-                <viewController id="uv6-O2-kN0" customClass="HomeViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="uv6-O2-kN0" customClass="HomeViewController" customModule="Storak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWo-CD-gnc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
