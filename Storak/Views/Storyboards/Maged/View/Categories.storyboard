@@ -43,6 +43,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoriesTableView" destination="XHb-3d-FVh" id="fhn-4l-ncl"/>
+                        <outlet property="searchBar" destination="fQd-rg-ZjI" id="zWL-7N-fEB"/>
                         <segue destination="fVj-za-nqN" kind="show" identifier="CategoryProductsSegue" id="IA5-vi-VD8"/>
                     </connections>
                 </viewController>
@@ -125,6 +126,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="productsCollectionView" destination="QYN-2S-rWo" id="Iwf-mv-MRC"/>
+                        <outlet property="searchBar" destination="ft0-Jv-Aum" id="LD7-tG-yND"/>
                         <outlet property="segmentedControl" destination="Rt6-pZ-IWT" id="OxV-Pw-heo"/>
                         <segue destination="grj-JM-CCq" kind="show" identifier="CartSegue" id="Stv-so-L0U"/>
                         <segue destination="7q1-Fe-cXv" kind="show" identifier="ProductDetailsSegue" id="2u7-5p-2dw"/>

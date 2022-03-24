@@ -11,12 +11,13 @@ protocol AllProductsProtocol {
     func requestAllProducts(completionHandler: @escaping ([Product] , Error?) -> Void)
 }
 
-class ProductsViewController: UIViewController {
+class ProductsViewController: UIViewController , UISearchBarDelegate{
     
     var selectedSegment: Int!
     var collectionID : String?
     var productType : String?
     var arrayOfProducts : [Product]?
+    var arrayOfFilteredData : [Product]?
     var selectedProduct : Product?
     var isWished = false
     
@@ -27,7 +28,8 @@ class ProductsViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var productsCollectionView: UICollectionView!
-  
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBAction func switchSelectedSegment(_ sender: UISegmentedControl) {
         
         selectedSegment = sender.selectedSegmentIndex
@@ -44,6 +46,7 @@ class ProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         
         selectedSegment = 0
         productsCollectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: "itemCell")
@@ -62,10 +65,13 @@ class ProductsViewController: UIViewController {
     }
     
     func detectingCurrentSegmant(){
+        
+        
         if(selectedSegment == 0){
             if(collectionID == "272068509743"){
                 service.requestAllProducts { products , error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -73,6 +79,7 @@ class ProductsViewController: UIViewController {
             }else{
                 NetworkLayer.requestBrandProducts(brandID: collectionID ?? "") { products , error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -83,6 +90,7 @@ class ProductsViewController: UIViewController {
             if(collectionID == "272068509743"){
                 NetworkLayer.requestAllProductsByProductType(productType: productType ?? "T-SHIRTS") { products , error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -90,6 +98,7 @@ class ProductsViewController: UIViewController {
             }else{
                 NetworkLayer.requestCategoryProducts(collectionID: collectionID ?? "272069034031", productType: productType ?? "T-SHIRTS") { products, error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -101,6 +110,7 @@ class ProductsViewController: UIViewController {
             if(collectionID == "272068509743"){
                 NetworkLayer.requestAllProductsByProductType(productType: productType ?? "SHOES") { products , error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -108,6 +118,7 @@ class ProductsViewController: UIViewController {
             }else{
                 NetworkLayer.requestCategoryProducts(collectionID: collectionID ?? "272069034031", productType: productType ?? "SHOES") { products, error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -119,6 +130,7 @@ class ProductsViewController: UIViewController {
             if(collectionID == "272068509743"){
                 NetworkLayer.requestAllProductsByProductType(productType: productType ?? "ACCESSORIES") { products , error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -126,6 +138,7 @@ class ProductsViewController: UIViewController {
             }else{
                 NetworkLayer.requestCategoryProducts(collectionID: collectionID ?? "272069034031", productType: productType ?? "ACCESSORIES") { products, error in
                     self.arrayOfProducts = products
+                    self.arrayOfFilteredData = self.arrayOfProducts
                     DispatchQueue.main.async {
                         self.productsCollectionView.reloadData()
                     }
@@ -138,13 +151,20 @@ class ProductsViewController: UIViewController {
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayOfProducts?.count ?? 0
+        return arrayOfFilteredData?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! ItemCell
-        let product = arrayOfProducts![indexPath.row]
+        var product = arrayOfProducts![indexPath.row]
+        
+        if (arrayOfFilteredData?.count != 0)  {
+            product = arrayOfFilteredData![indexPath.row]
+        }else{
+            product = arrayOfProducts![indexPath.row]
+        }
+        
         cell.cellProduct = product
         
         if arrayOfWishedProducts.contains(where: { wishedProduct in
@@ -214,5 +234,12 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.arrayOfFilteredData = searchText.isEmpty ? arrayOfProducts : arrayOfProducts!.filter{
+            ($0.productName?.contains(searchText.uppercased()) as! Bool)}
+        updateData()
+        productsCollectionView.reloadData()
     }
 }

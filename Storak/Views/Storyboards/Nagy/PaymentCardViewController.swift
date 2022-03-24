@@ -15,6 +15,8 @@ class PaymentCardViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var orderTotal = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +42,24 @@ class PaymentCardViewController: UIViewController {
                 self.saveButton.transform =
                    CGAffineTransform(scaleX: 1.0, y: 1.0)
             }, completion: nil)
+        
+        if (cvvCodeTextField.text!.isEmpty)  || (cardHolderNameTextField.text!.isEmpty) || (cardTextField.text!.isEmpty) {
+            let alert = UIAlertController(title: "Payment Failure", message: "Please enter your credentials", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } else {
+            
+            let alert = UIAlertController(title: "Payment Success", message: "Your successfully placed an order with total of \(orderTotal)", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Dismiss", style: .default) { _ in
+                localDataLayer.arrayOfCartProducts.removeAll()
+                localDataLayer.saveCartProducts()
+                print("Payment sucess")
+            }
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+
     }
     
 

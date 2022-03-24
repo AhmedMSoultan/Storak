@@ -66,6 +66,11 @@ class ProductDetailsViewController: UIViewController {
                    CGAffineTransform(scaleX: 1.0, y: 1.0)
             }, completion: nil)
         
+        let alert = UIAlertController(title: "Item Added", message: "Product added to your cart successfully", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
         localDataLayer.arrayOfCartProducts.append(product!)
         localDataLayer.saveCartProducts()
     }

@@ -75,9 +75,17 @@ class CartViewController: UIViewController {
         performSegue(withIdentifier: "paymentSegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "paymentSegue"){
+            let paymentCardVC = segue.destination as! PaymentCardViewController
+            paymentCardVC.orderTotal = subtotalPriceLabel.text ?? ""
+        }
+    }
+    
     func updateScreen() {
         localDataLayer.loadCartProducts()
         arrayOfCartItems = localDataLayer.arrayOfCartProducts
+        cartItemsTableView.reloadData()
         
         for item in arrayOfCartItems {
             print(item.variants![0].price!)

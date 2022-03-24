@@ -7,12 +7,15 @@
 
 import UIKit
 
-class CategoriesViewController: UIViewController {
+class CategoriesViewController: UIViewController , UISearchBarDelegate{
     
     @IBOutlet weak var categoriesTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     var selectedCategory : String?
     var arrayOfMainCategories = [MainCategory]()
+    var arrayOfFilteredData = [MainCategory]()
     var arrayOfCategoriesImages = [UIImage(named: "Home page"),
                                    UIImage(named: "KID"),
                                    UIImage(named: "MEN"),
@@ -24,9 +27,11 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        searchBar.delegate = self
         
         service.requestMainCategories { mainCategories, error in
             self.arrayOfMainCategories = mainCategories
+            self.arrayOfFilteredData = self.arrayOfMainCategories
             DispatchQueue.main.async {
                 self.categoriesTableView.reloadData()
             }
@@ -54,7 +59,7 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfMainCategories.count
+        return arrayOfFilteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +67,14 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withType: CategoryCell.self, for: indexPath)
         cell.selectionStyle = .none
         
-        let category = arrayOfMainCategories[indexPath.row]
+        var category = arrayOfMainCategories[indexPath.row]
+        
+        if arrayOfFilteredData.count != 0 {
+            category = arrayOfFilteredData[indexPath.row]
+        }else{
+            category = arrayOfMainCategories[indexPath.row]
+        }
+        
         cell.setupCell(categoryName: category.categoryName ?? "", categoryImage: category.categoryName ?? "")
         
         return cell
@@ -83,6 +95,13 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         UIView.animate(withDuration: 0.4) {
             cell.transform = CGAffineTransform.identity
         }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.arrayOfFilteredData = searchText.isEmpty ? arrayOfMainCategories : arrayOfMainCategories.filter{
+            ($0.categoryName?.contains(searchText.uppercased()) as! Bool)}
+        
+        categoriesTableView.reloadData()
     }
     
 }
