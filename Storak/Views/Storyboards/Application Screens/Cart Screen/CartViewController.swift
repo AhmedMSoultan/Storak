@@ -34,9 +34,6 @@ class CartViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(changeTotalPrice), name:Notification.Name(changeTotalPriceNotification), object: nil)
         
-        
-        
-        
     }
     
     @objc func changeTotalPrice(notification: Notification){
@@ -86,6 +83,8 @@ class CartViewController: UIViewController {
         localDataLayer.loadCartProducts()
         arrayOfCartItems = localDataLayer.arrayOfCartProducts
         cartItemsTableView.reloadData()
+        
+        initTotal = 0
         
         for item in arrayOfCartItems {
             print(item.variants![0].price!)

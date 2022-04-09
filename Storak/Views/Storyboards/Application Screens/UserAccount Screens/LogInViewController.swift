@@ -58,7 +58,6 @@ class LogInViewController: UIViewController {
             else{
                 self.user = user?.user
                 print(self.user!.uid)
-                //print("succed")
                 self.emailTF.text = ""
                 self.passwordTF.text = ""
                 let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "LoggedInMyAccountViewController") as! LoggedInMyAccountViewController

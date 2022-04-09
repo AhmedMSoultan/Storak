@@ -173,10 +173,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A01CD2427F1C0AD00FCCCE7 /* Products Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E84447BA27E3BBF6002485CB /* ProductsViewController.swift */,
+			);
+			path = "Products Screen";
+			sourceTree = "<group>";
+		};
+		0A01CD2527F1C0C800FCCCE7 /* Wishlist Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0A521DDD27EA625800022B61 /* WishListViewController.swift */,
+			);
+			path = "Wishlist Screen";
+			sourceTree = "<group>";
+		};
+		0A01CD2727F1C16C00FCCCE7 /* Product Details Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E2539F5527E8077000F6F65B /* ProductDetailsViewController.swift */,
+				0A0501A027E900BE002B8860 /* Cells */,
+			);
+			path = "Product Details Screen";
+			sourceTree = "<group>";
+		};
 		0A05019C27E8FC97002B8860 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				0A11087527DA52950012715F /* Main.storyboard */,
 				0AC9279A27E0C7E90077B1A7 /* HomeViewController.swift */,
 				0A05019E27E8FFDC002B8860 /* Cells */,
 			);
@@ -306,15 +330,13 @@
 			isa = PBXGroup;
 			children = (
 				0A11087D27DA52970012715F /* LaunchScreen.storyboard */,
-				0A1108F227DA730A0012715F /* Soultan */,
-				0A1108F127DA73020012715F /* Maged */,
-				0A1108EF27DA72EC0012715F /* Shibl */,
-				0A1108F027DA72FB0012715F /* Nagy */,
+				0A11087527DA52950012715F /* Main.storyboard */,
+				0A1108F227DA730A0012715F /* Application Screens */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		0A1108EF27DA72EC0012715F /* Shibl */ = {
+		0A1108EF27DA72EC0012715F /* UserAccount Screens */ = {
 			isa = PBXGroup;
 			children = (
 				0A1108E727DA70D80012715F /* UserAccount.storyboard */,
@@ -323,35 +345,31 @@
 				CE19C66527DBFCB400893A3B /* LogInViewController.swift */,
 				CE19C66727DBFCD900893A3B /* SignUpViewController.swift */,
 			);
-			path = Shibl;
+			path = "UserAccount Screens";
 			sourceTree = "<group>";
 		};
-		0A1108F027DA72FB0012715F /* Nagy */ = {
+		0A1108F027DA72FB0012715F /* Payment Screens */ = {
 			isa = PBXGroup;
 			children = (
 				0A1108ED27DA72E60012715F /* Payment.storyboard */,
 				E2539F5327E8076000F6F65B /* PaymentCardViewController.swift */,
-				E2539F5527E8077000F6F65B /* ProductDetailsViewController.swift */,
-				0A0501A027E900BE002B8860 /* Cells */,
 			);
-			path = Nagy;
+			path = "Payment Screens";
 			sourceTree = "<group>";
 		};
-		0A1108F127DA73020012715F /* Maged */ = {
-			isa = PBXGroup;
-			children = (
-				E8946C5B27DBF6B0007EFFC8 /* View */,
-			);
-			path = Maged;
-			sourceTree = "<group>";
-		};
-		0A1108F227DA730A0012715F /* Soultan */ = {
+		0A1108F227DA730A0012715F /* Application Screens */ = {
 			isa = PBXGroup;
 			children = (
 				0A05019C27E8FC97002B8860 /* Home Screen */,
+				E8946C5B27DBF6B0007EFFC8 /* Categories Screen */,
+				0A01CD2427F1C0AD00FCCCE7 /* Products Screen */,
+				0A01CD2727F1C16C00FCCCE7 /* Product Details Screen */,
+				0A01CD2527F1C0C800FCCCE7 /* Wishlist Screen */,
 				0A05019D27E8FCAE002B8860 /* Cart Screen */,
+				0A1108F027DA72FB0012715F /* Payment Screens */,
+				0A1108EF27DA72EC0012715F /* UserAccount Screens */,
 			);
-			path = Soultan;
+			path = "Application Screens";
 			sourceTree = "<group>";
 		};
 		0A1108F327DBB48F0012715F /* Constants */ = {
@@ -417,16 +435,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E8946C5B27DBF6B0007EFFC8 /* View */ = {
+		E8946C5B27DBF6B0007EFFC8 /* Categories Screen */ = {
 			isa = PBXGroup;
 			children = (
 				0A1108EB27DA71AD0012715F /* Categories.storyboard */,
 				E8946C5C27DBF6FE007EFFC8 /* CategoriesViewController.swift */,
-				E84447BA27E3BBF6002485CB /* ProductsViewController.swift */,
-				0A521DDD27EA625800022B61 /* WishListViewController.swift */,
 				E8946C6227DBF792007EFFC8 /* Cells */,
 			);
-			path = View;
+			path = "Categories Screen";
 			sourceTree = "<group>";
 		};
 		E8946C6227DBF792007EFFC8 /* Cells */ = {

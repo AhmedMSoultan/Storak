@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-Background" translatesAutoresizingMaskIntoConstraints="NO" id="SmK-dK-MYP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iHR-UB-6NQ">
                                 <rect key="frame" x="8" y="104" width="398" height="65.5"/>
                                 <subviews>
@@ -62,9 +65,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iHR-UB-6NQ" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" multiplier="0.09" id="6pA-69-0bR"/>
+                            <constraint firstAttribute="trailing" secondItem="SmK-dK-MYP" secondAttribute="trailing" id="Ob9-9W-KSX"/>
                             <constraint firstItem="iHR-UB-6NQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="PY0-Oh-hAc"/>
+                            <constraint firstAttribute="bottom" secondItem="SmK-dK-MYP" secondAttribute="bottom" id="XJ6-NM-oTF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iHR-UB-6NQ" secondAttribute="trailing" constant="8" id="bf3-iC-exi"/>
                             <constraint firstItem="iHR-UB-6NQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="l10-dV-EOd"/>
+                            <constraint firstItem="SmK-dK-MYP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="t52-Ra-0XZ"/>
+                            <constraint firstItem="SmK-dK-MYP" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="tNe-o5-7AU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Account" id="8v5-aY-zpa">
@@ -74,6 +81,9 @@
                             </barButtonItem>
                             <barButtonItem title="Cart" image="cart" catalog="system" id="Ief-fF-282">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="6Vh-Kk-ODQ" kind="show" id="5Pp-84-L7K"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -91,18 +101,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App-Background" translatesAutoresizingMaskIntoConstraints="NO" id="MLl-OI-7TT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-rU-Ozz">
-                                <rect key="frame" x="8" y="104" width="290" height="20.5"/>
+                                <rect key="frame" x="8" y="104" width="290" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyn-Ul-3jt">
-                                        <rect key="frame" x="0.0" y="0.0" width="145" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome ," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyn-Ul-3jt">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m15-Ab-p4Q">
-                                        <rect key="frame" x="145" y="0.0" width="145" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m15-Ab-p4Q">
+                                        <rect key="frame" x="145" y="0.0" width="145" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -113,7 +126,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NMS-rU-Ozz" firstAttribute="width" secondItem="3tP-fM-Edb" secondAttribute="width" multiplier="0.7" id="4zH-RU-igM"/>
+                            <constraint firstItem="MLl-OI-7TT" firstAttribute="top" secondItem="3tP-fM-Edb" secondAttribute="top" id="Lot-vb-JM9"/>
+                            <constraint firstAttribute="bottom" secondItem="MLl-OI-7TT" secondAttribute="bottom" id="cqU-Ej-f0q"/>
+                            <constraint firstAttribute="trailing" secondItem="MLl-OI-7TT" secondAttribute="trailing" id="ddQ-pq-KXx"/>
                             <constraint firstItem="NMS-rU-Ozz" firstAttribute="top" secondItem="Mfr-IN-Xmm" secondAttribute="top" constant="16" id="hXs-TX-hgn"/>
+                            <constraint firstItem="MLl-OI-7TT" firstAttribute="leading" secondItem="3tP-fM-Edb" secondAttribute="leading" id="nRM-a0-lpW"/>
                             <constraint firstItem="NMS-rU-Ozz" firstAttribute="leading" secondItem="Mfr-IN-Xmm" secondAttribute="leading" constant="8" id="oHL-fn-fJs"/>
                         </constraints>
                     </view>
@@ -130,6 +147,9 @@
                             </barButtonItem>
                             <barButtonItem title="Cart" image="cart" catalog="system" id="DXe-KE-ZwT">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="6Vh-Kk-ODQ" kind="show" id="I5q-Me-caR"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -140,6 +160,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwG-Iw-MCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="785"/>
+        </scene>
+        <!--CartViewController-->
+        <scene sceneID="BVU-33-0BI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="CartViewController" id="6Vh-Kk-ODQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XtM-s1-9xL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcV-5x-GcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="613"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="F7O-JK-reA">
@@ -416,6 +446,9 @@
             <point key="canvasLocation" x="67" y="785"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Pp-84-L7K"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="App-Background" width="1504" height="3252"/>
